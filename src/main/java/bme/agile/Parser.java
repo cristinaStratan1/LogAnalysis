@@ -1,12 +1,26 @@
 package bme.agile;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
+
+import org.burningwave.core.classes.AnnotationSourceGenerator;
+import org.burningwave.core.classes.ClassFactory;
+import org.burningwave.core.classes.ClassSourceGenerator;
+import org.burningwave.core.classes.FunctionSourceGenerator;
+import org.burningwave.core.classes.GenericSourceGenerator;
+import org.burningwave.core.classes.TypeDeclarationSourceGenerator;
+import org.burningwave.core.classes.UnitSourceGenerator;
+import org.burningwave.core.classes.VariableSourceGenerator;
 
 public class Parser {
 	
@@ -20,12 +34,25 @@ public class Parser {
 
     public static void main(String[] args) {
     	
-        BufferedReader reader;
-		File logfile = new File("src/main/resources/WCG100140020.txt");
+        
+		File logfile = new File("src/main/resources/msg_test.txt");
 		String[] filters = {SENT_ON, ENQUEUD_ON};
 		List<String> messagesList = new ArrayList<String>();
 		
-		try {
+		messagesList = parseTxtFile(logfile, filters);
+		System.out.println(messagesList);
+    }
+    
+    // Checks if a string 'inputStr' is contained in an array of string 'items'
+    public static boolean stringContainsItemFromList(String inputStr, String[] items) {
+        return Arrays.stream(items).anyMatch(inputStr::contains);
+    }
+    
+    //Parse a file
+    public static ArrayList<String> parseTxtFile(File logfile, String[] filters){
+    	BufferedReader reader;
+    	ArrayList<String> messagesList = new ArrayList<String>();
+    	try {
 			reader = Files.newBufferedReader(logfile.toPath(), StandardCharsets.UTF_8);
 	        reader.lines().forEach((temp) -> {
 	        	if(temp.contains(PORTEVENT) && stringContainsItemFromList(temp, filters)) {
@@ -46,16 +73,12 @@ public class Parser {
 						}
 	        		}
 	        		messagesList.add(message);
-	        		System.out.println(message);
+	        		//System.out.println(message);
 	        	}
 	        });
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-    }
-    
-    // Checks if a string 'inputStr' is contained in an array of string 'items'
-    public static boolean stringContainsItemFromList(String inputStr, String[] items) {
-        return Arrays.stream(items).anyMatch(inputStr::contains);
+    	return messagesList;
     }
 }

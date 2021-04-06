@@ -1,0 +1,23 @@
+2014/Oct/24 18:34:28.815184 mtc PORTEVENT HttpNodeLayerComponent.ttcn:191(function:sendInternalMessage) Sent on httpNodeInternalPort[2] to 853 @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "1"
+            }
+        }
+    },
+    aspHttp := {
+        {
+            httpMessage := {
+                method := "POST",
+                url := "/14A/v3/register",
+                body := "{ \"username\": \"10014002006@ericsson.se\", \"password\": \"10014002006\", \"mediaType\": \"rtp\", \"services\": [ \"im_chat\", \"file_transfer\", \"video_share\", \"ip_voice_call\", \"ip_video_call\", \"im_standalone\", \"cs\", \"ab\", \"+custom-valid-feature\", \"custom-invalid-feature\"] } ",
+                contentType := "application/json",
+                statusCode := "",
+                header := { }
+            }
+        }
+    }
+}

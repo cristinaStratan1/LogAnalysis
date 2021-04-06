@@ -3,4 +3,12 @@
   <groupId>bme.ansd.project</groupId>
   <artifactId>LogAnalysis</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  	<dependency>
+	    <groupId>org.burningwave</groupId>
+	    <artifactId>core</artifactId>
+	    <version>8.21.1</version>
+	</dependency>
+</dependencies>
 </project>
