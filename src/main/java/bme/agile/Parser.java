@@ -3,6 +3,8 @@ package bme.agile;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
 import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -22,33 +24,40 @@ import org.burningwave.core.classes.TypeDeclarationSourceGenerator;
 import org.burningwave.core.classes.UnitSourceGenerator;
 import org.burningwave.core.classes.VariableSourceGenerator;
 
-public class Parser {
-	
-	// CONSTANTS
-	public static final String SENT_ON = "Sent on";
-	public static final String ENQUEUD_ON = "Message enqueud on";
-	public static final String PORTEVENT = "PORTEVENT";
-	public static final String OPEN_BRACKET = "{";
-	public static final String CLOSED_BRACKET = "}";
-	public static final String NEW_LINE = "\n";
+import static bme.agile.Constants.*;
+
+public class Parser {	
 
     public static void main(String[] args) {
     	
-        
-		File logfile = new File("src/main/resources/msg_test.txt");
+		File logfile = new File(FILE_1);
 		String[] filters = {SENT_ON, ENQUEUD_ON};
 		List<String> messagesList = new ArrayList<String>();
+		List<MessageProperty> messageProperties = new ArrayList<>();
+		List<MessageProperty> tempMessageProperties = new ArrayList<>();
 		
+		// Creating a list of PORTEVENT messages (type SENT_ON or ENQUEUED_ON)
 		messagesList = parseTxtFile(logfile, filters);
-		System.out.println(messagesList);
+		
+		// Parsing each message to fill in the list of properties
+		messagesList.forEach((temp) -> {
+			tempMessageProperties.clear();
+			tempMessageProperties.addAll(messageProperties);
+			messageProperties.clear();
+			messageProperties.addAll(parseMessage(temp, tempMessageProperties));
+		});
+		// Printing on console the list of properties
+		messageProperties.forEach((temp) -> {
+			temp.printProperty();
+		});
     }
     
-    // Checks if a string 'inputStr' is contained in an array of string 'items'
+    // Checking if a string 'inputStr' contains the elements of an array of string 'items'
     public static boolean stringContainsItemFromList(String inputStr, String[] items) {
         return Arrays.stream(items).anyMatch(inputStr::contains);
     }
     
-    //Parse a file
+    // Parsing a text file and returning a list of the PORTEVENT messages
     public static ArrayList<String> parseTxtFile(File logfile, String[] filters){
     	BufferedReader reader;
     	ArrayList<String> messagesList = new ArrayList<String>();
@@ -60,7 +69,7 @@ public class Parser {
 	        		Integer closedBracketsNb = 0;
 	        		String message = OPEN_BRACKET + NEW_LINE;
 	        		String currentLine;
-	        		while (openBracketsNb != closedBracketsNb) {
+	        		while (openBracketsNb != closedBracketsNb) { // A message contains as many "{" as “}"
 	        			try {
 							currentLine = reader.readLine();
 							if(currentLine.contains(OPEN_BRACKET))
@@ -73,12 +82,65 @@ public class Parser {
 						}
 	        		}
 	        		messagesList.add(message);
-	        		//System.out.println(message);
 	        	}
 	        });
+	        reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
     	return messagesList;
+    }
+    
+    //Parsing a message and returning a list of properties contained in this message
+    public static List<MessageProperty> parseMessage(String message, List<MessageProperty> listMessageProperties){
+    	// Creation of a BufferedReader to go through the message
+    	Reader inputString = new StringReader(message);
+    	BufferedReader reader = new BufferedReader(inputString);
+    	    	
+    	try {
+    		String currentLine = reader.readLine();
+			while (currentLine != null) {
+				if (currentLine.contains(":=")) {
+					MessageProperty property = new MessageProperty (
+							currentLine.trim().substring(0, currentLine.trim().indexOf(":=")),
+							checkType(currentLine.substring(currentLine.indexOf(":=") + 1))
+					);
+					Boolean alreadyExists = false;
+					Integer index = 0;
+					while (alreadyExists == false && index < listMessageProperties.size()) {
+						alreadyExists = property.compareProperties(property, listMessageProperties.get(index));
+						index++;
+					}
+					if (alreadyExists == false) {
+						listMessageProperties.add(property);
+					}
+				}
+				currentLine = reader.readLine();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+		return listMessageProperties;
+    }
+    
+    //Checking the type of a property
+    public static String checkType(String propertyValue) {
+    	if (propertyValue.contains("\""))
+    		return STRING;
+    	else if (propertyValue.contains(OPEN_BRACKET))
+    		if (propertyValue.contains(CLOSED_BRACKET))
+    			return EMPTY_STRUCTURE;
+    		else 
+    			return COMPLEX_STRUCTURE;
+    	else {
+			try {
+		        Integer.parseInt(propertyValue);
+		        return INTEGER;
+		    } catch (NumberFormatException ex) {
+		        return UNKNOWN;
+		    }
+		}
     }
 }

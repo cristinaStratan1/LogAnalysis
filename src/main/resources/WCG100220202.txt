@@ -1,0 +1,1056 @@
+2014/Oct/24 20:26:16.897166 mtc TESTCASE WCG10022_0202.ttcn:23(testcase:WCG100220202) Test case WCG100220202 started.
+2014/Oct/24 20:26:16.897236 mtc PARALLEL WCG10022_0202.ttcn:23(testcase:WCG100220202) Initializing variables, timers and ports of component type WcgTestCaseComponent.wcgTestCaseComponent inside testcase WCG100220202.
+2014/Oct/24 20:26:16.899005 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port dnsInternalPort[0] was started.
+2014/Oct/24 20:26:16.899041 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port dnsInternalPort[1] was started.
+2014/Oct/24 20:26:16.899079 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port dnsInternalPort[2] was started.
+2014/Oct/24 20:26:16.899098 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port dnsInternalPort[3] was started.
+2014/Oct/24 20:26:16.899111 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[0] was started.
+2014/Oct/24 20:26:16.899124 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[1] was started.
+2014/Oct/24 20:26:16.899136 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[2] was started.
+2014/Oct/24 20:26:16.899148 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[3] was started.
+2014/Oct/24 20:26:16.899161 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[4] was started.
+2014/Oct/24 20:26:16.899173 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[5] was started.
+2014/Oct/24 20:26:16.899185 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[6] was started.
+2014/Oct/24 20:26:16.899197 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[7] was started.
+2014/Oct/24 20:26:16.899209 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[8] was started.
+2014/Oct/24 20:26:16.899221 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[9] was started.
+2014/Oct/24 20:26:16.899233 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[10] was started.
+2014/Oct/24 20:26:16.899246 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[11] was started.
+2014/Oct/24 20:26:16.899258 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[12] was started.
+2014/Oct/24 20:26:16.899270 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[13] was started.
+2014/Oct/24 20:26:16.899282 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[14] was started.
+2014/Oct/24 20:26:16.899321 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port httpNodeInternalPort[15] was started.
+2014/Oct/24 20:26:16.899336 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[0] was started.
+2014/Oct/24 20:26:16.899348 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[1] was started.
+2014/Oct/24 20:26:16.899361 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[2] was started.
+2014/Oct/24 20:26:16.899373 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[3] was started.
+2014/Oct/24 20:26:16.899385 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[4] was started.
+2014/Oct/24 20:26:16.899397 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[5] was started.
+2014/Oct/24 20:26:16.899409 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[6] was started.
+2014/Oct/24 20:26:16.899421 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port msrpInternalPort[7] was started.
+2014/Oct/24 20:26:16.899433 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[0] was started.
+2014/Oct/24 20:26:16.899445 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[1] was started.
+2014/Oct/24 20:26:16.899457 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[2] was started.
+2014/Oct/24 20:26:16.899469 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[3] was started.
+2014/Oct/24 20:26:16.899481 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[4] was started.
+2014/Oct/24 20:26:16.899493 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[5] was started.
+2014/Oct/24 20:26:16.899505 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[6] was started.
+2014/Oct/24 20:26:16.899516 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sipInternalPort[7] was started.
+2014/Oct/24 20:26:16.899529 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port sshClientPort was started.
+2014/Oct/24 20:26:16.899542 mtc PORTEVENT WCG10022_0202.ttcn:23(testcase:WCG100220202) Port tcpClientPort was started.
+2014/Oct/24 20:26:16.899554 mtc PARALLEL WCG10022_0202.ttcn:23(testcase:WCG100220202) Component type WcgTestCaseComponent.wcgTestCaseComponent was initialized.
+2014/Oct/24 20:26:16.899586 mtc USER TestCaseComponent.ttcn:50(function:setupTestCase) 
+2014/Oct/24 20:26:16.899607 mtc USER TestCaseComponent.ttcn:50(function:setupTestCase) 
+2014/Oct/24 20:26:16.899620 mtc USER TestCaseComponent.ttcn:50(function:setupTestCase) *************************************************************
+2014/Oct/24 20:26:16.899634 mtc USER TestCaseComponent.ttcn:50(function:setupTestCase) "setupTestCase at 100220202 starting..."
+2014/Oct/24 20:26:16.899655 mtc USER TestCaseComponent.ttcn:50(function:setupTestCase) *************************************************************
+2014/Oct/24 20:26:16.899668 mtc USER TestCaseComponent.ttcn:50(function:setupTestCase) 
+2014/Oct/24 20:26:16.899681 mtc USER TestCaseComponent.ttcn:50(function:setupTestCase) 
+2014/Oct/24 20:26:16.899698 mtc VERDICTOP TestCaseComponent.ttcn:52(function:setupTestCase) setverdict(pass): none -> pass reason: "Life is beautiful!", new component reason: "Life is beautiful!"
+2014/Oct/24 20:26:16.899723 mtc USER subscriberLib.ttcn:16(function:populateInfoInMySubscribersVariable) Starting populateInfoInMySubscribersVariable()
+2014/Oct/24 20:26:16.900535 mtc USER TestCaseComponent.ttcn:104(function:initializeTestCaseVariables) In function: initializeTestCaseVariables
+2014/Oct/24 20:26:16.900570 mtc USER externalFunctions.ttcn:105(function:executeCommand) Sending to command line: "ls local.vat 2>&1"
+2014/Oct/24 20:26:16.907720 mtc USER externalFunctions.ttcn:107(function:executeCommand) Response from executed command: "ls: cannot access local.vat: No such file or directory\n"
+2014/Oct/24 20:26:16.907853 mtc USER externalFunctions.ttcn:105(function:executeCommand) Sending to command line: "touch local.vat"
+2014/Oct/24 20:26:16.912518 mtc USER externalFunctions.ttcn:107(function:executeCommand) Response from executed command: ""
+2014/Oct/24 20:26:16.907846 mtc USER wcgTestCaseLib.ttcn:370(function:createLocalFlagFile) ""
+2014/Oct/24 20:26:16.912628 mtc USER sipClientApi.ttcn:505(function:setSipExpectationCommand) starting ...
+2014/Oct/24 20:26:16.912647 mtc VERDICTOP sipClientApi.ttcn:509(function:setSipExpectationCommand) getverdict: pass
+2014/Oct/24 20:26:16.912675 mtc USER sipClientLib.ttcn:919(function:assignSipClientComponent) sipServer (11)" is now using sip-0"
+2014/Oct/24 20:26:16.912701 mtc USER SipClientLayerComponent.ttcn:477(function:sendCommandToSip) starting sendCommandToSip
+2014/Oct/24 20:26:16.912718 mtc VERDICTOP SipClientLayerComponent.ttcn:480(function:sendCommandToSip) getverdict: pass
+2014/Oct/24 20:26:16.912741 mtc USER lib.ttcn:156(function:addParameter) starting addParameter with p_name = "SUBSCRIBER" and p_value = "11"
+2014/Oct/24 20:26:16.912770 mtc USER SipClientLayerComponent.ttcn:487(function:sendCommandToSip) starting sip
+2014/Oct/24 20:26:16.912788 mtc PARALLEL SipClientLayerComponent.ttcn:88(function:createPtc) Creating new PTC with component type SipClientComponent.sipClientComponent.
+2014/Oct/24 20:26:16.913083 hc PARALLEL - PTC with component reference 2653 finished. Process statistics: {
+    process id: 24971,
+    terminated normally,
+    exit status: 0,
+    user time: 0.012000 s,
+    system time: 0.012000 s,
+    maximum resident set size: 0,
+    integral resident set size: 0,
+    page faults not requiring physical I/O: 3839,
+    page faults requiring physical I/O: 0,
+    swaps: 0,
+    block input operations: 0,
+    block output operations: 88,
+    messages sent: 0,
+    messages received: 0,
+    signals received: 0,
+    voluntary context switches: 24,
+    involuntary context switches: 0
+}
+2014/Oct/24 20:26:16.913524 hc PARALLEL - PTC was created. Component reference: 2654, component type: SipClientComponent.sipClientComponent, testcase name: WCG100220202, process id: 25260.
+2014/Oct/24 20:26:16.913872 2654 EXECUTOR - TTCN-3 Parallel Test Component started on vat-012. Component reference: 2654, component type: SipClientComponent.sipClientComponent. Version: CRL 113 200/4 R2A.
+2014/Oct/24 20:26:16.914007 2654 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=Yes; LogEventTypes:=Yes; SourceInfoFormat:=Single; *.FileMask:=ACTION | DEFAULTOP | ERROR | EXECUTOR | PARALLEL | TESTCASE | PORTEVENT | STATISTICS | TIMEROP | USER | VERDICTOP | WARNING; *.ConsoleMask:=TESTCASE | STATISTICS; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2014/Oct/24 20:26:16.914191 2654 EXECUTOR - Connected to MC.
+2014/Oct/24 20:26:16.914292 2654 PARALLEL - Initializing variables, timers and ports of component type SipClientComponent.sipClientComponent inside testcase WCG100220202.
+2014/Oct/24 20:26:16.914373 mtc PARALLEL SipClientLayerComponent.ttcn:88(function:createPtc) PTC was created. Component reference: 2654, alive: no, type: SipClientComponent.sipClientComponent.
+2014/Oct/24 20:26:16.914434 mtc PARALLEL SipClientLayerComponent.ttcn:89(function:createPtc) Starting function sipRun({
+    {
+        parameterName := "STEP_NUMBER",
+        parameterValue := "0"
+    },
+    {
+        parameterName := "SUBSCRIBER",
+        parameterValue := "11"
+    }
+}, 0) on component 2654.
+2014/Oct/24 20:26:16.914549 mtc PARALLEL SipClientLayerComponent.ttcn:89(function:createPtc) Function was started.
+2014/Oct/24 20:26:16.914598 mtc USER SipClientLayerComponent.ttcn:236(function:receiveInternalMessage) starting...
+2014/Oct/24 20:26:16.914619 mtc VERDICTOP SipClientLayerComponent.ttcn:238(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.914637 mtc TIMEROP SipClientLayerComponent.ttcn:245(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 10 s
+2014/Oct/24 20:26:16.915169 2654 PORTEVENT - Port sipClientPort was started.
+2014/Oct/24 20:26:16.915226 2654 PORTEVENT - Port sipInternalPort was started.
+2014/Oct/24 20:26:16.915244 2654 PARALLEL - Component type SipClientComponent.sipClientComponent was initialized.
+2014/Oct/24 20:26:16.916099 2654 PARALLEL - Starting function sipRun({
+    {
+        parameterName := "STEP_NUMBER",
+        parameterValue := "0"
+    },
+    {
+        parameterName := "SUBSCRIBER",
+        parameterValue := "11"
+    }
+}, 0).
+2014/Oct/24 20:26:16.916165 2654 USER sipClientInterface.ttcn:33(function:sipRun)  +----------------------------------------+
+2014/Oct/24 20:26:16.916203 2654 USER sipClientInterface.ttcn:33(function:sipRun)  |   _____ _____ _____   
+2014/Oct/24 20:26:16.916222 2654 USER sipClientInterface.ttcn:33(function:sipRun)  |  / ____|_   _|  __ \  
+2014/Oct/24 20:26:16.916239 2654 USER sipClientInterface.ttcn:33(function:sipRun)  | | (___   | | | |__) | 
+2014/Oct/24 20:26:16.916256 2654 USER sipClientInterface.ttcn:33(function:sipRun)  |  \___ \  | | |  ___/  
+2014/Oct/24 20:26:16.916273 2654 USER sipClientInterface.ttcn:33(function:sipRun)  |  ____) |_| |_| |      
+2014/Oct/24 20:26:16.916290 2654 USER sipClientInterface.ttcn:33(function:sipRun)  | |_____/|_____|_|      
+2014/Oct/24 20:26:16.916307 2654 USER sipClientInterface.ttcn:33(function:sipRun)  +----------------------------------------+
+2014/Oct/24 20:26:16.916334 2654 VERDICTOP sipClientInterface.ttcn:34(function:sipRun) setverdict(pass): none -> pass reason: "Life is beautiful!", new component reason: "Life is beautiful!"
+2014/Oct/24 20:26:16.928261 2654 USER sipClientInterface.ttcn:212(function:sipSetParameters) number of parameters:2
+2014/Oct/24 20:26:16.928381 2654 USER sipClientInterface.ttcn:56(function:sipRun) 
+2014/Oct/24 20:26:16.928409 2654 USER sipClientInterface.ttcn:56(function:sipRun) 
+2014/Oct/24 20:26:16.928422 2654 USER sipClientInterface.ttcn:56(function:sipRun) *************************************************************
+2014/Oct/24 20:26:16.928435 2654 USER sipClientInterface.ttcn:56(function:sipRun) "sipServer (11) - component sip-0 starting - testcase: WCG100220202"
+2014/Oct/24 20:26:16.928453 2654 USER sipClientInterface.ttcn:56(function:sipRun) *************************************************************
+2014/Oct/24 20:26:16.928465 2654 USER sipClientInterface.ttcn:56(function:sipRun) 
+2014/Oct/24 20:26:16.928476 2654 USER sipClientInterface.ttcn:56(function:sipRun) 
+2014/Oct/24 20:26:16.928489 2654 USER sipClientInterface.ttcn:144(function:sipInitialize) starting ...
+2014/Oct/24 20:26:16.928508 2654 PARALLEL sipClientInterface.ttcn:146(function:sipInitialize) Connecting ports 2654:sipInternalPort and mtc:sipInternalPort[0].
+2014/Oct/24 20:26:16.928656 mtc PORTEVENT SipClientLayerComponent.ttcn:253(function:receiveInternalMessage) Port sipInternalPort[0] is waiting for connection from 2654:sipInternalPort on UNIX pathname /tmp/ttcn3-portconn-2d5ff413.
+2014/Oct/24 20:26:16.928819 mtc PORTEVENT SipClientLayerComponent.ttcn:253(function:receiveInternalMessage) Port sipInternalPort[0] has accepted the connection from 2654:sipInternalPort.
+2014/Oct/24 20:26:16.928907 2654 PORTEVENT sipClientInterface.ttcn:146(function:sipInitialize) Port sipInternalPort has established the connection with mtc:sipInternalPort[0] using transport type UNIX.
+2014/Oct/24 20:26:16.928956 2654 PARALLEL sipClientInterface.ttcn:146(function:sipInitialize) Connect operation on 2654:sipInternalPort and mtc:sipInternalPort[0] finished.
+2014/Oct/24 20:26:16.928986 2654 USER sipClientInterface.ttcn:147(function:sipInitialize) sipInternalPort connected
+2014/Oct/24 20:26:16.929001 2654 PARALLEL sipClientInterface.ttcn:149(function:sipInitialize) Mapping port 2654:sipClientPort to system:sipClientPort[0].
+2014/Oct/24 20:26:16.929051 2654 PORTEVENT sipClientInterface.ttcn:149(function:sipInitialize) Port sipClientPort was mapped to system:sipClientPort[0].
+2014/Oct/24 20:26:16.929122 2654 PARALLEL sipClientInterface.ttcn:149(function:sipInitialize) Map operation of 2654:sipClientPort to system:sipClientPort[0] finished.
+2014/Oct/24 20:26:16.929147 2654 USER sipClientInterface.ttcn:150(function:sipInitialize) sipClientPort mapped
+2014/Oct/24 20:26:16.929230 2654 PORTEVENT sipClientInterface.ttcn:152(function:sipInitialize) Sent on sipInternalPort to mtc @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+}
+2014/Oct/24 20:26:16.929303 mtc PORTEVENT SipClientLayerComponent.ttcn:253(function:receiveInternalMessage) Message enqueued on sipInternalPort[0] from 2654 @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 1
+2014/Oct/24 20:26:16.929372 mtc PORTEVENT SipClientLayerComponent.ttcn:254(function:receiveInternalMessage) Receive operation on port sipInternalPort[0] succeeded, message from 2654: @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 1
+2014/Oct/24 20:26:16.929420 mtc PORTEVENT SipClientLayerComponent.ttcn:254(function:receiveInternalMessage) Message with id 1 was extracted from the queue of sipInternalPort[0].
+2014/Oct/24 20:26:16.929463 mtc TIMEROP SipClientLayerComponent.ttcn:255(function:receiveInternalMessage) Stop timer TimerTestCaseInternalCommunicationGuard: 10 s
+2014/Oct/24 20:26:16.929488 mtc USER SipClientLayerComponent.ttcn:256(function:receiveInternalMessage) "received message from sip 0: "{
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+}
+2014/Oct/24 20:26:16.929525 mtc USER SipClientLayerComponent.ttcn:257(function:receiveInternalMessage) "received parameters from sip 0: "{ }
+2014/Oct/24 20:26:16.929558 mtc USER SipClientLayerComponent.ttcn:363(function:sipSetParameters) number of parameters:0
+2014/Oct/24 20:26:16.929605 mtc USER SipClientLayerComponent.ttcn:189(function:sendInternalMessage) starting ...
+2014/Oct/24 20:26:16.929638 mtc USER SipClientLayerComponent.ttcn:236(function:receiveInternalMessage) starting...
+2014/Oct/24 20:26:16.929669 mtc VERDICTOP SipClientLayerComponent.ttcn:238(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.929735 mtc TIMEROP SipClientLayerComponent.ttcn:245(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 0.01 s
+2014/Oct/24 20:26:16.929802 2654 USER sipClientInterface.ttcn:154(function:sipInitialize) ending ...
+2014/Oct/24 20:26:16.929839 2654 TIMEROP sipClientInterface.ttcn:74(function:sipRun) Start timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:16.941743 mtc TIMEROP SipClientLayerComponent.ttcn:286(function:receiveInternalMessage) Timeout TimerTestCaseInternalCommunicationGuard: 0.01 s
+2014/Oct/24 20:26:16.941789 mtc USER SipClientLayerComponent.ttcn:288(function:receiveInternalMessage) a timeout here is normal, just a queue check
+2014/Oct/24 20:26:16.941833 mtc PORTEVENT SipClientLayerComponent.ttcn:202(function:sendInternalMessage) Sent on sipInternalPort[0] to 2654 @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMMAND_START_LISTENER",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "0"
+            },
+            {
+                parameterName := "SUBSCRIBER",
+                parameterValue := "11"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+}
+2014/Oct/24 20:26:16.941874 mtc USER SipClientLayerComponent.ttcn:205(function:sendInternalMessage) "Message sent to sip 0"
+2014/Oct/24 20:26:16.941914 mtc USER SipClientLayerComponent.ttcn:236(function:receiveInternalMessage) starting...
+2014/Oct/24 20:26:16.941947 mtc VERDICTOP SipClientLayerComponent.ttcn:238(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.941981 mtc TIMEROP SipClientLayerComponent.ttcn:245(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 185 s
+2014/Oct/24 20:26:16.942089 2654 PORTEVENT sipClientInterface.ttcn:78(function:sipRun) Message enqueued on sipInternalPort from mtc @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMMAND_START_LISTENER",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "0"
+            },
+            {
+                parameterName := "SUBSCRIBER",
+                parameterValue := "11"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 1
+2014/Oct/24 20:26:16.942156 2654 PORTEVENT sipClientInterface.ttcn:79(function:sipRun) Receive operation on port sipInternalPort succeeded, message from mtc: @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMMAND_START_LISTENER",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "0"
+            },
+            {
+                parameterName := "SUBSCRIBER",
+                parameterValue := "11"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 1
+2014/Oct/24 20:26:16.942209 2654 PORTEVENT sipClientInterface.ttcn:79(function:sipRun) Message with id 1 was extracted from the queue of sipInternalPort.
+2014/Oct/24 20:26:16.942232 2654 TIMEROP sipClientInterface.ttcn:80(function:sipRun) Stop timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:16.942251 2654 USER sipClientInterface.ttcn:212(function:sipSetParameters) number of parameters:2
+2014/Oct/24 20:26:16.942278 2654 USER sipClientInterface.ttcn:298(function:processCommand) processing command: "COMMAND_START_LISTENER"
+2014/Oct/24 20:26:16.942303 2654 USER sipClientImplementation.ttcn:1052(function:startSipListener) starting startSipListener
+2014/Oct/24 20:26:16.942318 2654 USER sipClientImplementation.ttcn:1061(function:startSipListener) Calling f_IPL4_listen() with port sipClientPort "142.133.150.169" 26720 udp
+2014/Oct/24 20:26:16.942604 2654 USER sipClientImplementation.ttcn:1063(function:startSipListener) Result from f_IPL4_listen(){
+    errorCode := omit,
+    connId := 1,
+    os_error_code := omit,
+    os_error_text := omit
+}
+2014/Oct/24 20:26:16.942664 2654 USER sipClientImplementation.ttcn:1080(function:startSipListener) Calling f_IPL4_listen() with port sipClientPort "142.133.150.169" 26720 tcp
+2014/Oct/24 20:26:16.942788 2654 USER sipClientImplementation.ttcn:1082(function:startSipListener) Result from f_IPL4_listen(){
+    errorCode := omit,
+    connId := 2,
+    os_error_code := omit,
+    os_error_text := omit
+}
+2014/Oct/24 20:26:16.942835 2654 USER sipClientInterface.ttcn:387(function:processCommand) sending a response to MTC...
+2014/Oct/24 20:26:16.942871 2654 PORTEVENT sipClientInterface.ttcn:388(function:processCommand) Sent on sipInternalPort to mtc @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_SUCCESS",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_START_LISTENER"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+}
+2014/Oct/24 20:26:16.942928 mtc PORTEVENT SipClientLayerComponent.ttcn:253(function:receiveInternalMessage) Message enqueued on sipInternalPort[0] from 2654 @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_SUCCESS",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_START_LISTENER"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 2
+2014/Oct/24 20:26:16.942977 mtc PORTEVENT SipClientLayerComponent.ttcn:254(function:receiveInternalMessage) Receive operation on port sipInternalPort[0] succeeded, message from 2654: @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_SUCCESS",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_START_LISTENER"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 2
+2014/Oct/24 20:26:16.943001 mtc PORTEVENT SipClientLayerComponent.ttcn:254(function:receiveInternalMessage) Message with id 2 was extracted from the queue of sipInternalPort[0].
+2014/Oct/24 20:26:16.943019 mtc TIMEROP SipClientLayerComponent.ttcn:255(function:receiveInternalMessage) Stop timer TimerTestCaseInternalCommunicationGuard: 185 s
+2014/Oct/24 20:26:16.943040 mtc USER SipClientLayerComponent.ttcn:256(function:receiveInternalMessage) "received message from sip 0: "{
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_SUCCESS",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_START_LISTENER"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+}
+2014/Oct/24 20:26:16.943120 mtc USER SipClientLayerComponent.ttcn:257(function:receiveInternalMessage) "received parameters from sip 0: "{
+    {
+        parameterName := "COMMAND_EXECUTED",
+        parameterValue := "COMMAND_START_LISTENER"
+    }
+}
+2014/Oct/24 20:26:16.943162 mtc USER SipClientLayerComponent.ttcn:363(function:sipSetParameters) number of parameters:1
+2014/Oct/24 20:26:16.943197 mtc USER SipClientLayerComponent.ttcn:375(function:sipSetParameters) Command finished: "COMMAND_START_LISTENER"
+2014/Oct/24 20:26:16.943402 mtc USER httpNodeApi.ttcn:174(function:startHttpNode) starting httpNode
+2014/Oct/24 20:26:16.943447 mtc PARALLEL HttpNodeLayerComponent.ttcn:68(function:createPtc) Creating new PTC with component type HttpNodeComponent.httpNodeComponent.
+2014/Oct/24 20:26:16.943660 2654 TIMEROP sipClientInterface.ttcn:74(function:sipRun) Start timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:16.944035 hc PARALLEL - PTC was created. Component reference: 2655, component type: HttpNodeComponent.httpNodeComponent, testcase name: WCG100220202, process id: 25261.
+2014/Oct/24 20:26:16.944453 2655 EXECUTOR - TTCN-3 Parallel Test Component started on vat-012. Component reference: 2655, component type: HttpNodeComponent.httpNodeComponent. Version: CRL 113 200/4 R2A.
+2014/Oct/24 20:26:16.944612 2655 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=Yes; LogEventTypes:=Yes; SourceInfoFormat:=Single; *.FileMask:=ACTION | DEFAULTOP | ERROR | EXECUTOR | PARALLEL | TESTCASE | PORTEVENT | STATISTICS | TIMEROP | USER | VERDICTOP | WARNING; *.ConsoleMask:=TESTCASE | STATISTICS; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2014/Oct/24 20:26:16.944794 2655 EXECUTOR - Connected to MC.
+2014/Oct/24 20:26:16.944837 2655 PARALLEL - Initializing variables, timers and ports of component type HttpNodeComponent.httpNodeComponent inside testcase WCG100220202.
+2014/Oct/24 20:26:16.944892 mtc PARALLEL HttpNodeLayerComponent.ttcn:68(function:createPtc) PTC was created. Component reference: 2655, alive: no, type: HttpNodeComponent.httpNodeComponent.
+2014/Oct/24 20:26:16.944977 mtc PARALLEL HttpNodeLayerComponent.ttcn:69(function:createPtc) Starting function httpNodeRun({ }, 0, {
+    listeningPortAsServer := 38090,
+    useSslAsServer := false,
+    destinationIpAsClient := "142.133.142.3",
+    destinationPortAsClient := 8080,
+    useSslAsClient := false
+}) on component 2655.
+2014/Oct/24 20:26:16.945115 mtc PARALLEL HttpNodeLayerComponent.ttcn:69(function:createPtc) Function was started.
+2014/Oct/24 20:26:16.945170 mtc USER HttpNodeLayerComponent.ttcn:227(function:receiveInternalMessage) starting receiveInternalMessage ...
+2014/Oct/24 20:26:16.945186 2655 PORTEVENT - Port clientPort was started.
+2014/Oct/24 20:26:16.945230 mtc VERDICTOP HttpNodeLayerComponent.ttcn:229(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.945234 2655 PORTEVENT - Port serverPort was started.
+2014/Oct/24 20:26:16.945258 2655 PORTEVENT - Port httpNodeInternalPort was started.
+2014/Oct/24 20:26:16.945266 mtc TIMEROP HttpNodeLayerComponent.ttcn:236(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 10 s
+2014/Oct/24 20:26:16.945276 2655 PARALLEL - Component type HttpNodeComponent.httpNodeComponent was initialized.
+2014/Oct/24 20:26:16.946173 2655 PARALLEL - Starting function httpNodeRun({ }, 0, {
+    listeningPortAsServer := 38090,
+    useSslAsServer := false,
+    destinationIpAsClient := "142.133.142.3",
+    destinationPortAsClient := 8080,
+    useSslAsClient := false
+}).
+2014/Oct/24 20:26:16.946237 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  +----------------------------------------+
+2014/Oct/24 20:26:16.946262 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  |  _    _ _______ _______ _____   
+2014/Oct/24 20:26:16.946280 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | | |  | |__   __|__   __|  __ \  
+2014/Oct/24 20:26:16.946297 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | | |__| |  | |     | |  | |__) | 
+2014/Oct/24 20:26:16.946314 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | |  __  |  | |     | |  |  ___/  
+2014/Oct/24 20:26:16.946331 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | | |  | |  | |     | |  | |      
+2014/Oct/24 20:26:16.946348 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | |_|  |_|  |_|     |_|  |_|      
+2014/Oct/24 20:26:16.946364 2655 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  +----------------------------------------+
+2014/Oct/24 20:26:16.946389 2655 VERDICTOP httpNodeInterface.ttcn:31(function:httpNodeRun) setverdict(pass): none -> pass reason: "Life is beautiful!", new component reason: "Life is beautiful!"
+2014/Oct/24 20:26:16.946466 2655 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.946490 2655 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.946508 2655 USER httpNodeInterface.ttcn:40(function:httpNodeRun) *************************************************************
+2014/Oct/24 20:26:16.946526 2655 USER httpNodeInterface.ttcn:40(function:httpNodeRun) "component httpNode-0 starting - testcase: WCG100220202"
+2014/Oct/24 20:26:16.946564 2655 USER httpNodeInterface.ttcn:40(function:httpNodeRun) *************************************************************
+2014/Oct/24 20:26:16.946583 2655 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.946600 2655 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.946621 2655 USER httpNodeInterface.ttcn:126(function:httpNodeInitialize) starting ...
+2014/Oct/24 20:26:16.946653 2655 PARALLEL httpNodeInterface.ttcn:130(function:httpNodeInitialize) Mapping port 2655:clientPort to system:clientPort[0].
+2014/Oct/24 20:26:16.946868 2655 PORTEVENT httpNodeInterface.ttcn:130(function:httpNodeInitialize) Port clientPort was mapped to system:clientPort[0].
+2014/Oct/24 20:26:16.947060 2655 PARALLEL httpNodeInterface.ttcn:130(function:httpNodeInitialize) Map operation of 2655:clientPort to system:clientPort[0] finished.
+2014/Oct/24 20:26:16.947111 2655 USER httpNodeInterface.ttcn:131(function:httpNodeInitialize) httpClientPort mapped
+2014/Oct/24 20:26:16.947133 2655 PARALLEL httpNodeInterface.ttcn:133(function:httpNodeInitialize) Mapping port 2655:serverPort to system:serverPort[0].
+2014/Oct/24 20:26:16.947308 2655 PORTEVENT httpNodeInterface.ttcn:133(function:httpNodeInitialize) Port serverPort was mapped to system:serverPort[0].
+2014/Oct/24 20:26:16.947529 2655 PARALLEL httpNodeInterface.ttcn:133(function:httpNodeInitialize) Map operation of 2655:serverPort to system:serverPort[0] finished.
+2014/Oct/24 20:26:16.947584 2655 USER httpNodeInterface.ttcn:134(function:httpNodeInitialize) httpServerPort mapped
+2014/Oct/24 20:26:16.947613 2655 PARALLEL httpNodeInterface.ttcn:136(function:httpNodeInitialize) Connecting ports 2655:httpNodeInternalPort and mtc:httpNodeInternalPort[0].
+2014/Oct/24 20:26:16.947782 mtc PORTEVENT HttpNodeLayerComponent.ttcn:239(function:receiveInternalMessage) Port httpNodeInternalPort[0] is waiting for connection from 2655:httpNodeInternalPort on UNIX pathname /tmp/ttcn3-portconn-2502992a.
+2014/Oct/24 20:26:16.948022 2655 PORTEVENT httpNodeInterface.ttcn:136(function:httpNodeInitialize) Port httpNodeInternalPort has established the connection with mtc:httpNodeInternalPort[0] using transport type UNIX.
+2014/Oct/24 20:26:16.948070 mtc PORTEVENT HttpNodeLayerComponent.ttcn:239(function:receiveInternalMessage) Port httpNodeInternalPort[0] has accepted the connection from 2655:httpNodeInternalPort.
+2014/Oct/24 20:26:16.948239 2655 PARALLEL httpNodeInterface.ttcn:136(function:httpNodeInitialize) Connect operation on 2655:httpNodeInternalPort and mtc:httpNodeInternalPort[0] finished.
+2014/Oct/24 20:26:16.948292 2655 USER httpNodeInterface.ttcn:137(function:httpNodeInitialize) httpNodeInternalPort connected
+2014/Oct/24 20:26:16.948312 2655 USER httpNodeInterface.ttcn:139(function:httpNodeInitialize) opening server port...
+2014/Oct/24 20:26:16.948487 2655 PORTEVENT BaseHttpServerComponent.ttcn:55(function:openServerForListening) Sent on serverPort to system @HTTPmsg_Types.Listen : {
+    local_hostname := "142.133.150.169",
+    portnumber := 38090,
+    use_ssl := false
+}
+2014/Oct/24 20:26:16.948639 2655 PORTEVENT BaseHttpServerComponent.ttcn:55(function:openServerForListening) Message enqueued on serverPort from system @HTTPmsg_Types.Listen_result : {
+    portnumber := 38090
+} id 1
+2014/Oct/24 20:26:16.948684 2655 TIMEROP BaseHttpServerComponent.ttcn:73(function:receiveHTTPServerListenResult) Start timer timerWaitForHTTPRequest: 5 s
+2014/Oct/24 20:26:16.948768 2655 PORTEVENT BaseHttpServerComponent.ttcn:77(function:receiveHTTPServerListenResult) Receive operation on port serverPort succeeded, message from system(): @HTTPmsg_Types.Listen_result : {
+    portnumber := 38090
+} id 1
+2014/Oct/24 20:26:16.948818 2655 PORTEVENT BaseHttpServerComponent.ttcn:77(function:receiveHTTPServerListenResult) Message with id 1 was extracted from the queue of serverPort.
+2014/Oct/24 20:26:16.948844 2655 TIMEROP BaseHttpServerComponent.ttcn:78(function:receiveHTTPServerListenResult) Stop timer timerWaitForHTTPRequest: 5 s
+2014/Oct/24 20:26:16.948956 2655 PORTEVENT httpNodeInterface.ttcn:141(function:httpNodeInitialize) Sent on httpNodeInternalPort to mtc @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+}
+2014/Oct/24 20:26:16.949042 2655 USER httpNodeInterface.ttcn:147(function:httpNodeInitialize) ending ...
+2014/Oct/24 20:26:16.949075 2655 USER httpNodeInterface.ttcn:207(function:httpNodeSetParameters) number of parameters:0
+2014/Oct/24 20:26:16.949103 mtc PORTEVENT HttpNodeLayerComponent.ttcn:239(function:receiveInternalMessage) Message enqueued on httpNodeInternalPort[0] from 2655 @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+} id 1
+2014/Oct/24 20:26:16.949105 2655 TIMEROP httpNodeInterface.ttcn:62(function:httpNodeRun) Start timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:16.949196 mtc PORTEVENT HttpNodeLayerComponent.ttcn:240(function:receiveInternalMessage) Receive operation on port httpNodeInternalPort[0] succeeded, message from 2655: @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+} id 1
+2014/Oct/24 20:26:16.949247 mtc PORTEVENT HttpNodeLayerComponent.ttcn:240(function:receiveInternalMessage) Message with id 1 was extracted from the queue of httpNodeInternalPort[0].
+2014/Oct/24 20:26:16.949289 mtc TIMEROP HttpNodeLayerComponent.ttcn:241(function:receiveInternalMessage) Stop timer TimerTestCaseInternalCommunicationGuard: 10 s
+2014/Oct/24 20:26:16.949334 mtc USER HttpNodeLayerComponent.ttcn:242(function:receiveInternalMessage) "received message from httpNode 0: "{
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+}
+2014/Oct/24 20:26:16.949413 mtc USER wcgTestCaseLib.ttcn:132(function:wcgSetupTestCase) 
+2014/Oct/24 20:26:16.949450 mtc USER wcgTestCaseLib.ttcn:132(function:wcgSetupTestCase) 
+2014/Oct/24 20:26:16.949480 mtc USER wcgTestCaseLib.ttcn:132(function:wcgSetupTestCase) *************************************************************
+2014/Oct/24 20:26:16.949516 mtc USER wcgTestCaseLib.ttcn:132(function:wcgSetupTestCase) "wcgSetupTestCase at 100220202 finished!"
+2014/Oct/24 20:26:16.949554 mtc USER wcgTestCaseLib.ttcn:132(function:wcgSetupTestCase) *************************************************************
+2014/Oct/24 20:26:16.949585 mtc USER wcgTestCaseLib.ttcn:132(function:wcgSetupTestCase) 
+2014/Oct/24 20:26:16.949615 mtc USER wcgTestCaseLib.ttcn:132(function:wcgSetupTestCase) 
+2014/Oct/24 20:26:16.949650 mtc USER testWCG10010_0001.ttcn:19(function:runWCG100100001) 
+2014/Oct/24 20:26:16.949680 mtc USER testWCG10010_0001.ttcn:19(function:runWCG100100001) 
+2014/Oct/24 20:26:16.949710 mtc USER testWCG10010_0001.ttcn:19(function:runWCG100100001) =============================================================
+2014/Oct/24 20:26:16.949740 mtc USER testWCG10010_0001.ttcn:19(function:runWCG100100001) "WCG100220202, STEP 1, register dora and diego"
+2014/Oct/24 20:26:16.949821 mtc USER testWCG10010_0001.ttcn:19(function:runWCG100100001) =============================================================
+2014/Oct/24 20:26:16.949851 mtc USER testWCG10010_0001.ttcn:19(function:runWCG100100001) 
+2014/Oct/24 20:26:16.949880 mtc USER testWCG10010_0001.ttcn:19(function:runWCG100100001) 
+2014/Oct/24 20:26:16.949935 mtc USER wcgSessionLib.ttcn:57(function:registerUser) starting registerUser
+2014/Oct/24 20:26:16.949976 mtc USER wcgSessionLib.ttcn:65(function:registerUser) "saved for user 6 private id ""10022020206@ericsson.se"
+2014/Oct/24 20:26:16.950145 mtc USER wcgHttpLib.ttcn:178(function:sendHttpRequest) starting sendHttpRequest
+2014/Oct/24 20:26:16.950189 mtc USER wcgHttpLib.ttcn:187(function:updateWithExtensions) starting updateWithExtensions
+2014/Oct/24 20:26:16.950229 mtc USER httpNodeApi.ttcn:132(function:sendAsyncHttpRequest) starting sendAsyncHttpRequest
+2014/Oct/24 20:26:16.950264 mtc VERDICTOP httpNodeApi.ttcn:134(function:sendAsyncHttpRequest) getverdict: pass
+2014/Oct/24 20:26:16.950311 mtc USER HttpNodeLayerComponent.ttcn:312(function:assignHttpComponent) dora (6)" is now using http-1"
+2014/Oct/24 20:26:16.950360 mtc USER httpNodeApi.ttcn:30(function:sendCommandToHttpNode) starting sendCommandToHttpNode
+2014/Oct/24 20:26:16.950395 mtc USER httpNodeApi.ttcn:174(function:startHttpNode) starting httpNode
+2014/Oct/24 20:26:16.950434 mtc PARALLEL HttpNodeLayerComponent.ttcn:68(function:createPtc) Creating new PTC with component type HttpNodeComponent.httpNodeComponent.
+2014/Oct/24 20:26:16.950901 hc PARALLEL - PTC was created. Component reference: 2656, component type: HttpNodeComponent.httpNodeComponent, testcase name: WCG100220202, process id: 25262.
+2014/Oct/24 20:26:16.951250 2656 EXECUTOR - TTCN-3 Parallel Test Component started on vat-012. Component reference: 2656, component type: HttpNodeComponent.httpNodeComponent. Version: CRL 113 200/4 R2A.
+2014/Oct/24 20:26:16.951371 2656 EXECUTOR - TTCN Logger v2.2 options: TimeStampFormat:=DateTime; LogEntityName:=Yes; LogEventTypes:=Yes; SourceInfoFormat:=Single; *.FileMask:=ACTION | DEFAULTOP | ERROR | EXECUTOR | PARALLEL | TESTCASE | PORTEVENT | STATISTICS | TIMEROP | USER | VERDICTOP | WARNING; *.ConsoleMask:=TESTCASE | STATISTICS; LogFileSize:=0; LogFileNumber:=1; DiskFullAction:=Error
+2014/Oct/24 20:26:16.951518 2656 EXECUTOR - Connected to MC.
+2014/Oct/24 20:26:16.951561 2656 PARALLEL - Initializing variables, timers and ports of component type HttpNodeComponent.httpNodeComponent inside testcase WCG100220202.
+2014/Oct/24 20:26:16.951617 mtc PARALLEL HttpNodeLayerComponent.ttcn:68(function:createPtc) PTC was created. Component reference: 2656, alive: no, type: HttpNodeComponent.httpNodeComponent.
+2014/Oct/24 20:26:16.951687 mtc PARALLEL HttpNodeLayerComponent.ttcn:69(function:createPtc) Starting function httpNodeRun({ }, 1, {
+    listeningPortAsServer := 38091,
+    useSslAsServer := false,
+    destinationIpAsClient := "142.133.142.3",
+    destinationPortAsClient := 8080,
+    useSslAsClient := false
+}) on component 2656.
+2014/Oct/24 20:26:16.951812 mtc PARALLEL HttpNodeLayerComponent.ttcn:69(function:createPtc) Function was started.
+2014/Oct/24 20:26:16.951864 mtc USER HttpNodeLayerComponent.ttcn:227(function:receiveInternalMessage) starting receiveInternalMessage ...
+2014/Oct/24 20:26:16.951905 2656 PORTEVENT - Port clientPort was started.
+2014/Oct/24 20:26:16.951906 mtc VERDICTOP HttpNodeLayerComponent.ttcn:229(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.951947 mtc TIMEROP HttpNodeLayerComponent.ttcn:236(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 10 s
+2014/Oct/24 20:26:16.951950 2656 PORTEVENT - Port serverPort was started.
+2014/Oct/24 20:26:16.951973 2656 PORTEVENT - Port httpNodeInternalPort was started.
+2014/Oct/24 20:26:16.951991 2656 PARALLEL - Component type HttpNodeComponent.httpNodeComponent was initialized.
+2014/Oct/24 20:26:16.952892 2656 PARALLEL - Starting function httpNodeRun({ }, 1, {
+    listeningPortAsServer := 38091,
+    useSslAsServer := false,
+    destinationIpAsClient := "142.133.142.3",
+    destinationPortAsClient := 8080,
+    useSslAsClient := false
+}).
+2014/Oct/24 20:26:16.952956 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  +----------------------------------------+
+2014/Oct/24 20:26:16.952980 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  |  _    _ _______ _______ _____   
+2014/Oct/24 20:26:16.952998 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | | |  | |__   __|__   __|  __ \  
+2014/Oct/24 20:26:16.953015 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | | |__| |  | |     | |  | |__) | 
+2014/Oct/24 20:26:16.953031 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | |  __  |  | |     | |  |  ___/  
+2014/Oct/24 20:26:16.953048 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | | |  | |  | |     | |  | |      
+2014/Oct/24 20:26:16.953064 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  | |_|  |_|  |_|     |_|  |_|      
+2014/Oct/24 20:26:16.953081 2656 USER httpNodeInterface.ttcn:30(function:httpNodeRun)  +----------------------------------------+
+2014/Oct/24 20:26:16.953106 2656 VERDICTOP httpNodeInterface.ttcn:31(function:httpNodeRun) setverdict(pass): none -> pass reason: "Life is beautiful!", new component reason: "Life is beautiful!"
+2014/Oct/24 20:26:16.953155 2656 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.953174 2656 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.953190 2656 USER httpNodeInterface.ttcn:40(function:httpNodeRun) *************************************************************
+2014/Oct/24 20:26:16.953209 2656 USER httpNodeInterface.ttcn:40(function:httpNodeRun) "component httpNode-1 starting - testcase: WCG100220202"
+2014/Oct/24 20:26:16.953244 2656 USER httpNodeInterface.ttcn:40(function:httpNodeRun) *************************************************************
+2014/Oct/24 20:26:16.953262 2656 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.953279 2656 USER httpNodeInterface.ttcn:40(function:httpNodeRun) 
+2014/Oct/24 20:26:16.953299 2656 USER httpNodeInterface.ttcn:126(function:httpNodeInitialize) starting ...
+2014/Oct/24 20:26:16.953329 2656 PARALLEL httpNodeInterface.ttcn:130(function:httpNodeInitialize) Mapping port 2656:clientPort to system:clientPort[1].
+2014/Oct/24 20:26:16.953507 2656 PORTEVENT httpNodeInterface.ttcn:130(function:httpNodeInitialize) Port clientPort was mapped to system:clientPort[1].
+2014/Oct/24 20:26:16.953695 2656 PARALLEL httpNodeInterface.ttcn:130(function:httpNodeInitialize) Map operation of 2656:clientPort to system:clientPort[1] finished.
+2014/Oct/24 20:26:16.953745 2656 USER httpNodeInterface.ttcn:131(function:httpNodeInitialize) httpClientPort mapped
+2014/Oct/24 20:26:16.953767 2656 PARALLEL httpNodeInterface.ttcn:133(function:httpNodeInitialize) Mapping port 2656:serverPort to system:serverPort[1].
+2014/Oct/24 20:26:16.953893 2656 PORTEVENT httpNodeInterface.ttcn:133(function:httpNodeInitialize) Port serverPort was mapped to system:serverPort[1].
+2014/Oct/24 20:26:16.954041 2656 PARALLEL httpNodeInterface.ttcn:133(function:httpNodeInitialize) Map operation of 2656:serverPort to system:serverPort[1] finished.
+2014/Oct/24 20:26:16.954079 2656 USER httpNodeInterface.ttcn:134(function:httpNodeInitialize) httpServerPort mapped
+2014/Oct/24 20:26:16.954104 2656 PARALLEL httpNodeInterface.ttcn:136(function:httpNodeInitialize) Connecting ports 2656:httpNodeInternalPort and mtc:httpNodeInternalPort[1].
+2014/Oct/24 20:26:16.954290 mtc PORTEVENT HttpNodeLayerComponent.ttcn:239(function:receiveInternalMessage) Port httpNodeInternalPort[1] is waiting for connection from 2656:httpNodeInternalPort on UNIX pathname /tmp/ttcn3-portconn-1a02982a.
+2014/Oct/24 20:26:16.954514 2656 PORTEVENT httpNodeInterface.ttcn:136(function:httpNodeInitialize) Port httpNodeInternalPort has established the connection with mtc:httpNodeInternalPort[1] using transport type UNIX.
+2014/Oct/24 20:26:16.954570 mtc PORTEVENT HttpNodeLayerComponent.ttcn:239(function:receiveInternalMessage) Port httpNodeInternalPort[1] has accepted the connection from 2656:httpNodeInternalPort.
+2014/Oct/24 20:26:16.954745 2656 PARALLEL httpNodeInterface.ttcn:136(function:httpNodeInitialize) Connect operation on 2656:httpNodeInternalPort and mtc:httpNodeInternalPort[1] finished.
+2014/Oct/24 20:26:16.954793 2656 USER httpNodeInterface.ttcn:137(function:httpNodeInitialize) httpNodeInternalPort connected
+2014/Oct/24 20:26:16.954813 2656 USER httpNodeInterface.ttcn:139(function:httpNodeInitialize) opening server port...
+2014/Oct/24 20:26:16.954954 2656 PORTEVENT BaseHttpServerComponent.ttcn:55(function:openServerForListening) Sent on serverPort to system @HTTPmsg_Types.Listen : {
+    local_hostname := "142.133.150.169",
+    portnumber := 38091,
+    use_ssl := false
+}
+2014/Oct/24 20:26:16.955084 2656 PORTEVENT BaseHttpServerComponent.ttcn:55(function:openServerForListening) Message enqueued on serverPort from system @HTTPmsg_Types.Listen_result : {
+    portnumber := 38091
+} id 1
+2014/Oct/24 20:26:16.955127 2656 TIMEROP BaseHttpServerComponent.ttcn:73(function:receiveHTTPServerListenResult) Start timer timerWaitForHTTPRequest: 5 s
+2014/Oct/24 20:26:16.955178 2656 PORTEVENT BaseHttpServerComponent.ttcn:77(function:receiveHTTPServerListenResult) Receive operation on port serverPort succeeded, message from system(): @HTTPmsg_Types.Listen_result : {
+    portnumber := 38091
+} id 1
+2014/Oct/24 20:26:16.955208 2656 PORTEVENT BaseHttpServerComponent.ttcn:77(function:receiveHTTPServerListenResult) Message with id 1 was extracted from the queue of serverPort.
+2014/Oct/24 20:26:16.955231 2656 TIMEROP BaseHttpServerComponent.ttcn:78(function:receiveHTTPServerListenResult) Stop timer timerWaitForHTTPRequest: 5 s
+2014/Oct/24 20:26:16.955330 2656 PORTEVENT httpNodeInterface.ttcn:141(function:httpNodeInitialize) Sent on httpNodeInternalPort to mtc @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+}
+2014/Oct/24 20:26:16.955393 2656 USER httpNodeInterface.ttcn:147(function:httpNodeInitialize) ending ...
+2014/Oct/24 20:26:16.955425 2656 USER httpNodeInterface.ttcn:207(function:httpNodeSetParameters) number of parameters:0
+2014/Oct/24 20:26:16.955441 mtc PORTEVENT HttpNodeLayerComponent.ttcn:239(function:receiveInternalMessage) Message enqueued on httpNodeInternalPort[1] from 2656 @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+} id 1
+2014/Oct/24 20:26:16.955469 2656 TIMEROP httpNodeInterface.ttcn:62(function:httpNodeRun) Start timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:16.955538 mtc PORTEVENT HttpNodeLayerComponent.ttcn:240(function:receiveInternalMessage) Receive operation on port httpNodeInternalPort[1] succeeded, message from 2656: @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+} id 1
+2014/Oct/24 20:26:16.955593 mtc PORTEVENT HttpNodeLayerComponent.ttcn:240(function:receiveInternalMessage) Message with id 1 was extracted from the queue of httpNodeInternalPort[1].
+2014/Oct/24 20:26:16.955638 mtc TIMEROP HttpNodeLayerComponent.ttcn:241(function:receiveInternalMessage) Stop timer TimerTestCaseInternalCommunicationGuard: 10 s
+2014/Oct/24 20:26:16.955685 mtc USER HttpNodeLayerComponent.ttcn:242(function:receiveInternalMessage) "received message from httpNode 1: "{
+    internalMessage := {
+        description := "COMPONENT_UP_AND_RUNNING",
+        parameters := { }
+    },
+    aspHttp := { }
+}
+2014/Oct/24 20:26:16.955755 mtc USER HttpNodeLayerComponent.ttcn:167(function:sendInternalMessage) starting ...
+2014/Oct/24 20:26:16.955792 mtc USER HttpNodeLayerComponent.ttcn:169(function:sendInternalMessage) !Begin:checkHttpNodeStarted ... 
+2014/Oct/24 20:26:16.955845 mtc USER HttpNodeLayerComponent.ttcn:174(function:sendInternalMessage) !End:checkHttpNodeStarted ... 
+2014/Oct/24 20:26:16.955882 mtc USER HttpNodeLayerComponent.ttcn:176(function:sendInternalMessage) !Begin:receiveInternalMsg...
+2014/Oct/24 20:26:16.955917 mtc USER HttpNodeLayerComponent.ttcn:227(function:receiveInternalMessage) starting receiveInternalMessage ...
+2014/Oct/24 20:26:16.955954 mtc VERDICTOP HttpNodeLayerComponent.ttcn:229(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.955993 mtc TIMEROP HttpNodeLayerComponent.ttcn:236(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 0.01 s
+2014/Oct/24 20:26:16.969797 mtc TIMEROP HttpNodeLayerComponent.ttcn:267(function:receiveInternalMessage) Timeout TimerTestCaseInternalCommunicationGuard: 0.01 s
+2014/Oct/24 20:26:16.969883 mtc USER HttpNodeLayerComponent.ttcn:269(function:receiveInternalMessage) a timeout here is normal, just a queue check
+2014/Oct/24 20:26:16.969906 mtc USER HttpNodeLayerComponent.ttcn:182(function:sendInternalMessage) !End:receiveInternalMsg...
+2014/Oct/24 20:26:16.969924 mtc USER HttpNodeLayerComponent.ttcn:190(function:sendInternalMessage) !Begin: send to port...
+2014/Oct/24 20:26:16.970008 mtc PORTEVENT HttpNodeLayerComponent.ttcn:191(function:sendInternalMessage) Sent on httpNodeInternalPort[1] to 2656 @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "1"
+            }
+        }
+    },
+    aspHttp := {
+        {
+            httpMessage := {
+                method := "POST",
+                url := "/14A/v3/register",
+                body := "{ \"username\": \"10022020206@ericsson.se\", \"password\": \"10022020206\", \"mediaType\": \"\", \"services\": [ \"im_chat\", \"file_transfer\", \"video_share\", \"ip_voice_call\", \"ip_video_call\", \"im_standalone\", \"cs\", \"ab\", \"+custom-valid-feature\", \"custom-invalid-feature\"] } ",
+                contentType := "application/json",
+                statusCode := "",
+                header := { }
+            }
+        }
+    }
+}
+2014/Oct/24 20:26:16.970092 mtc USER HttpNodeLayerComponent.ttcn:193(function:sendInternalMessage) !End: send to port...
+2014/Oct/24 20:26:16.970133 mtc USER HttpNodeLayerComponent.ttcn:196(function:sendInternalMessage) "Message sent to httpNode 1"
+2014/Oct/24 20:26:16.970287 2656 PORTEVENT httpNodeInterface.ttcn:66(function:httpNodeRun) Message enqueued on httpNodeInternalPort from mtc @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "1"
+            }
+        }
+    },
+    aspHttp := {
+        {
+            httpMessage := {
+                method := "POST",
+                url := "/14A/v3/register",
+                body := "{ \"username\": \"10022020206@ericsson.se\", \"password\": \"10022020206\", \"mediaType\": \"\", \"services\": [ \"im_chat\", \"file_transfer\", \"video_share\", \"ip_voice_call\", \"ip_video_call\", \"im_standalone\", \"cs\", \"ab\", \"+custom-valid-feature\", \"custom-invalid-feature\"] } ",
+                contentType := "application/json",
+                statusCode := "",
+                header := { }
+            }
+        }
+    }
+} id 1
+2014/Oct/24 20:26:16.970376 mtc USER wcgSessionLib.ttcn:332(function:sipRegisterReceiveAndRespond) starting sipRegisterReceiveAndRespond
+2014/Oct/24 20:26:16.970400 2656 PORTEVENT httpNodeInterface.ttcn:67(function:httpNodeRun) Receive operation on port httpNodeInternalPort succeeded, message from mtc: @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "1"
+            }
+        }
+    },
+    aspHttp := {
+        {
+            httpMessage := {
+                method := "POST",
+                url := "/14A/v3/register",
+                body := "{ \"username\": \"10022020206@ericsson.se\", \"password\": \"10022020206\", \"mediaType\": \"\", \"services\": [ \"im_chat\", \"file_transfer\", \"video_share\", \"ip_voice_call\", \"ip_video_call\", \"im_standalone\", \"cs\", \"ab\", \"+custom-valid-feature\", \"custom-invalid-feature\"] } ",
+                contentType := "application/json",
+                statusCode := "",
+                header := { }
+            }
+        }
+    }
+} id 1
+2014/Oct/24 20:26:16.970413 mtc VERDICTOP wcgSessionLib.ttcn:334(function:sipRegisterReceiveAndRespond) getverdict: pass
+2014/Oct/24 20:26:16.970492 2656 PORTEVENT httpNodeInterface.ttcn:67(function:httpNodeRun) Message with id 1 was extracted from the queue of httpNodeInternalPort.
+2014/Oct/24 20:26:16.970496 mtc USER wcgSessionSipLib.ttcn:43(function:expectSipRegisterMessage) starting expectSipRegisterMessage
+2014/Oct/24 20:26:16.970521 2656 TIMEROP httpNodeInterface.ttcn:68(function:httpNodeRun) Stop timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:16.970546 mtc VERDICTOP wcgSessionSipLib.ttcn:45(function:expectSipRegisterMessage) getverdict: pass
+2014/Oct/24 20:26:16.970577 2656 USER httpNodeInterface.ttcn:207(function:httpNodeSetParameters) number of parameters:1
+2014/Oct/24 20:26:16.970582 mtc USER wcgSipLib.ttcn:317(function:receiveAndValidateSipMessage) starting receiveAndValidateSipMessage {
+    method := REGISTER_E (11)
+}
+2014/Oct/24 20:26:16.970623 mtc VERDICTOP wcgSipLib.ttcn:319(function:receiveAndValidateSipMessage) getverdict: pass
+2014/Oct/24 20:26:16.970642 2656 USER httpNodeInterface.ttcn:265(function:processCommand) processing command: "COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE"
+2014/Oct/24 20:26:16.970642 mtc USER sipClientApi.ttcn:715(function:receiveSipMessage) starting receiveSipMessage {
+    method := REGISTER_E (11)
+} retransmission=false
+2014/Oct/24 20:26:16.970663 mtc VERDICTOP sipClientApi.ttcn:717(function:receiveSipMessage) getverdict: pass
+2014/Oct/24 20:26:16.970681 mtc USER sipClientApi.ttcn:505(function:setSipExpectationCommand) starting ...
+2014/Oct/24 20:26:16.970685 2656 USER httpNodeImplementation.ttcn:188(function:processHttpClientSendMessage) starting...processHttpClientSendMessage
+2014/Oct/24 20:26:16.970709 mtc VERDICTOP sipClientApi.ttcn:509(function:setSipExpectationCommand) getverdict: pass
+2014/Oct/24 20:26:16.970735 2656 USER BaseHttpClientComponent.ttcn:234(function:sendHTTPClientRequest) starting sendHTTPClientRequest()...
+2014/Oct/24 20:26:16.970747 mtc USER SipClientLayerComponent.ttcn:477(function:sendCommandToSip) starting sendCommandToSip
+2014/Oct/24 20:26:16.970772 2656 USER BaseHttpClientComponent.ttcn:303(function:clearHTTPClientPort) starting ...
+2014/Oct/24 20:26:16.970781 mtc VERDICTOP SipClientLayerComponent.ttcn:480(function:sendCommandToSip) getverdict: pass
+2014/Oct/24 20:26:16.970813 2656 TIMEROP BaseHttpClientComponent.ttcn:307(function:clearHTTPClientPort) Start timer timerWaitForClearHTTPClientPort: 0 s
+2014/Oct/24 20:26:16.970822 mtc USER lib.ttcn:156(function:addParameter) starting addParameter with p_name = "SUBSCRIBER" and p_value = "11"
+2014/Oct/24 20:26:16.970850 2656 TIMEROP BaseHttpClientComponent.ttcn:313(function:clearHTTPClientPort) Timeout timerWaitForClearHTTPClientPort: 0 s
+2014/Oct/24 20:26:16.970864 mtc USER SipClientLayerComponent.ttcn:189(function:sendInternalMessage) starting ...
+2014/Oct/24 20:26:16.970874 2656 USER BaseHttpClientComponent.ttcn:314(function:clearHTTPClientPort)  Clearing of messages in the http queue completed
+2014/Oct/24 20:26:16.970886 mtc USER SipClientLayerComponent.ttcn:236(function:receiveInternalMessage) starting...
+2014/Oct/24 20:26:16.970895 2656 USER BaseHttpClientComponent.ttcn:240(function:sendHTTPClientRequest)  opening a new connection ...
+2014/Oct/24 20:26:16.970927 mtc VERDICTOP SipClientLayerComponent.ttcn:238(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.970938 2656 PORTEVENT BaseHttpClientComponent.ttcn:241(function:sendHTTPClientRequest) Sent on clientPort to system @HTTPmsg_Types.Connect : {
+    hostname := "142.133.142.3",
+    portnumber := 8080,
+    use_ssl := false
+}
+2014/Oct/24 20:26:16.970952 mtc TIMEROP SipClientLayerComponent.ttcn:245(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 0.01 s
+2014/Oct/24 20:26:16.985752 mtc TIMEROP SipClientLayerComponent.ttcn:286(function:receiveInternalMessage) Timeout TimerTestCaseInternalCommunicationGuard: 0.01 s
+2014/Oct/24 20:26:16.985824 mtc USER SipClientLayerComponent.ttcn:288(function:receiveInternalMessage) a timeout here is normal, just a queue check
+2014/Oct/24 20:26:16.985878 mtc PORTEVENT SipClientLayerComponent.ttcn:202(function:sendInternalMessage) Sent on sipInternalPort[0] to 2654 @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMMAND_RECEIVE_MESSAGE",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "1"
+            },
+            {
+                parameterName := "SUBSCRIBER",
+                parameterValue := "11"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+}
+2014/Oct/24 20:26:16.985949 mtc USER SipClientLayerComponent.ttcn:205(function:sendInternalMessage) "Message sent to sip 0"
+2014/Oct/24 20:26:16.985995 mtc USER sipClientApi.ttcn:539(function:waitForSipToBeDone) starting...
+2014/Oct/24 20:26:16.986025 mtc VERDICTOP sipClientApi.ttcn:541(function:waitForSipToBeDone) getverdict: pass
+2014/Oct/24 20:26:16.986063 mtc USER SipClientLayerComponent.ttcn:236(function:receiveInternalMessage) starting...
+2014/Oct/24 20:26:16.986090 mtc VERDICTOP SipClientLayerComponent.ttcn:238(function:receiveInternalMessage) getverdict: pass
+2014/Oct/24 20:26:16.986109 mtc TIMEROP SipClientLayerComponent.ttcn:245(function:receiveInternalMessage) Start timer TimerTestCaseInternalCommunicationGuard: 185 s
+2014/Oct/24 20:26:16.986203 2654 PORTEVENT sipClientInterface.ttcn:78(function:sipRun) Message enqueued on sipInternalPort from mtc @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMMAND_RECEIVE_MESSAGE",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "1"
+            },
+            {
+                parameterName := "SUBSCRIBER",
+                parameterValue := "11"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 2
+2014/Oct/24 20:26:16.986284 2654 PORTEVENT sipClientInterface.ttcn:79(function:sipRun) Receive operation on port sipInternalPort succeeded, message from mtc: @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMMAND_RECEIVE_MESSAGE",
+        parameters := {
+            {
+                parameterName := "STEP_NUMBER",
+                parameterValue := "1"
+            },
+            {
+                parameterName := "SUBSCRIBER",
+                parameterValue := "11"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 2
+2014/Oct/24 20:26:16.986341 2654 PORTEVENT sipClientInterface.ttcn:79(function:sipRun) Message with id 2 was extracted from the queue of sipInternalPort.
+2014/Oct/24 20:26:16.986372 2654 TIMEROP sipClientInterface.ttcn:80(function:sipRun) Stop timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:16.986402 2654 USER sipClientInterface.ttcn:212(function:sipSetParameters) number of parameters:2
+2014/Oct/24 20:26:16.986450 2654 USER sipClientInterface.ttcn:298(function:processCommand) processing command: "COMMAND_RECEIVE_MESSAGE"
+2014/Oct/24 20:26:16.986502 2654 USER wcgSipClientImplementation.ttcn:25(function:processReceiveSipMessage) starting processReceiveSipMessage
+2014/Oct/24 20:26:16.986541 2654 USER BaseSipClientComponent.ttcn:300(function:generalReceiveSip) starting generalReceiveSip
+2014/Oct/24 20:26:16.986938 2654 TIMEROP BaseSipClientComponent.ttcn:320(function:generalReceiveSip) Start timer timerWaitForSipMessage: 15 s
+2014/Oct/24 20:26:21.505698 2656 WARNING BaseHttpClientComponent.ttcn:241(function:sendHTTPClientRequest) Abstract socket: warning: Cannot connect to server when trying to open client connection: No route to host
+2014/Oct/24 20:26:21.505815 2656 PORTEVENT BaseHttpClientComponent.ttcn:241(function:sendHTTPClientRequest) Message enqueued on clientPort from system @HTTPmsg_Types.Connect_result : {
+    client_id := -1
+} id 1
+2014/Oct/24 20:26:21.505858 2656 TIMEROP BaseHttpClientComponent.ttcn:243(function:sendHTTPClientRequest) Start timer timerWaitForHTTPOpenConnection: 2 s
+2014/Oct/24 20:26:21.505902 2656 PORTEVENT BaseHttpClientComponent.ttcn:245(function:sendHTTPClientRequest) Receive operation on port clientPort succeeded, message from system(): @HTTPmsg_Types.Connect_result : {
+    client_id := -1
+} id 1
+2014/Oct/24 20:26:21.505927 2656 PORTEVENT BaseHttpClientComponent.ttcn:245(function:sendHTTPClientRequest) Message with id 1 was extracted from the queue of clientPort.
+2014/Oct/24 20:26:21.506002 2656 TIMEROP BaseHttpClientComponent.ttcn:246(function:sendHTTPClientRequest) Stop timer timerWaitForHTTPOpenConnection: 2 s
+2014/Oct/24 20:26:21.506035 2656 USER BaseHttpClientComponent.ttcn:258(function:sendHTTPClientRequest)  Connection refused
+2014/Oct/24 20:26:21.506051 2656 USER httpNodeImplementation.ttcn:222(function:processHttpClientSendMessage) send request failed
+
+2014/Oct/24 20:26:21.506076 2656 USER lib.ttcn:156(function:addParameter) starting addParameter with p_name = "ERROR_MESSAGE" and p_value = "problems executing the command received: COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE"
+2014/Oct/24 20:26:21.506106 2656 USER httpNodeInterface.ttcn:354(function:processCommand) sending an error response to MTC...
+2014/Oct/24 20:26:21.506184 2656 PORTEVENT httpNodeInterface.ttcn:355(function:processCommand) Sent on httpNodeInternalPort to mtc @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_FAILURE",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE"
+            },
+            {
+                parameterName := "ERROR_MESSAGE",
+                parameterValue := "problems executing the command received: COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE"
+            }
+        }
+    },
+    aspHttp := { }
+}
+2014/Oct/24 20:26:21.506286 2656 VERDICTOP httpNodeInterface.ttcn:89(function:httpNodeRun) getverdict: pass
+2014/Oct/24 20:26:21.506309 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  +----------------------------------------+
+2014/Oct/24 20:26:21.506322 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  |   _______    ___       __   __         |
+2014/Oct/24 20:26:21.506332 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  |  |   ____|  /   \     |  | |  |        |
+2014/Oct/24 20:26:21.506342 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  |  |  |__    /  ^  \    |  | |  |        |
+2014/Oct/24 20:26:21.506352 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  |  |   __|  /  /_\  \   |  | |  |        |
+2014/Oct/24 20:26:21.506362 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  |  |  |    /  _____  \  |  | |  `----.   |
+2014/Oct/24 20:26:21.506372 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  |  |__|   /__/     \__\ |__| |_______|   |
+2014/Oct/24 20:26:21.506382 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  |                                        |
+2014/Oct/24 20:26:21.506387 mtc PORTEVENT SipClientLayerComponent.ttcn:253(function:receiveInternalMessage) Message enqueued on httpNodeInternalPort[1] from 2656 @variables.internalPortMessageWithAspHttp : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_FAILURE",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE"
+            },
+            {
+                parameterName := "ERROR_MESSAGE",
+                parameterValue := "problems executing the command received: COMMAND_HTTP_CLIENT_SEND_GET_ANY_MESSAGE"
+            }
+        }
+    },
+    aspHttp := { }
+} id 2
+2014/Oct/24 20:26:21.506392 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  +----------------------------------------+
+2014/Oct/24 20:26:21.506402 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun) "|  REASON:   problems processing the command received in component 1"
+2014/Oct/24 20:26:21.506425 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun) "|  STEP:     1"
+2014/Oct/24 20:26:21.506438 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun) "|  TESTCASE: WCG100220202"
+2014/Oct/24 20:26:21.506451 2656 USER httpNodeInterface.ttcn:89(function:httpNodeRun)  +----------------------------------------+
+2014/Oct/24 20:26:21.506473 2656 VERDICTOP httpNodeInterface.ttcn:89(function:httpNodeRun) setverdict(fail): pass -> fail reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in component 1"", new component reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in component 1""
+2014/Oct/24 20:26:21.506491 2656 TIMEROP httpNodeInterface.ttcn:62(function:httpNodeRun) Start timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:31.993739 2654 TIMEROP BaseSipClientComponent.ttcn:373(function:generalReceiveSip) Timeout timerWaitForSipMessage: 15 s
+2014/Oct/24 20:26:31.993879 2654 USER BaseSipClientComponent.ttcn:377(function:generalReceiveSip) Timeout waiting for expected SIP message  <--- IS THERE A PROBLEM HERE?
+2014/Oct/24 20:26:31.993914 2654 USER sipClientInterface.ttcn:390(function:processCommand) sending an error response to MTC...
+2014/Oct/24 20:26:31.993938 2654 USER lib.ttcn:156(function:addParameter) starting addParameter with p_name = "ERROR_MESSAGE" and p_value = "problems executing the command received: COMMAND_RECEIVE_MESSAGE"
+2014/Oct/24 20:26:31.994006 2654 PORTEVENT sipClientInterface.ttcn:396(function:processCommand) Sent on sipInternalPort to mtc @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_FAILURE",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_RECEIVE_MESSAGE"
+            },
+            {
+                parameterName := "ERROR_MESSAGE",
+                parameterValue := "problems executing the command received: COMMAND_RECEIVE_MESSAGE"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+}
+2014/Oct/24 20:26:31.994063 2654 VERDICTOP sipClientInterface.ttcn:101(function:sipRun) getverdict: pass
+2014/Oct/24 20:26:31.994081 2654 USER sipClientInterface.ttcn:101(function:sipRun)  +----------------------------------------+
+2014/Oct/24 20:26:31.994093 2654 USER sipClientInterface.ttcn:101(function:sipRun)  |   _______    ___       __   __         |
+2014/Oct/24 20:26:31.994104 2654 USER sipClientInterface.ttcn:101(function:sipRun)  |  |   ____|  /   \     |  | |  |        |
+2014/Oct/24 20:26:31.994114 2654 USER sipClientInterface.ttcn:101(function:sipRun)  |  |  |__    /  ^  \    |  | |  |        |
+2014/Oct/24 20:26:31.994169 2654 USER sipClientInterface.ttcn:101(function:sipRun)  |  |   __|  /  /_\  \   |  | |  |        |
+2014/Oct/24 20:26:31.994184 2654 USER sipClientInterface.ttcn:101(function:sipRun)  |  |  |    /  _____  \  |  | |  `----.   |
+2014/Oct/24 20:26:31.994195 2654 USER sipClientInterface.ttcn:101(function:sipRun)  |  |__|   /__/     \__\ |__| |_______|   |
+2014/Oct/24 20:26:31.994205 2654 USER sipClientInterface.ttcn:101(function:sipRun)  |                                        |
+2014/Oct/24 20:26:31.994215 2654 USER sipClientInterface.ttcn:101(function:sipRun)  +----------------------------------------+
+2014/Oct/24 20:26:31.994225 2654 USER sipClientInterface.ttcn:101(function:sipRun) "|  REASON:   problems processing the command received in sip component 0"
+2014/Oct/24 20:26:31.994243 2654 USER sipClientInterface.ttcn:101(function:sipRun) "|  STEP:     1"
+2014/Oct/24 20:26:31.994255 2654 USER sipClientInterface.ttcn:101(function:sipRun) "|  TESTCASE: WCG100220202"
+2014/Oct/24 20:26:31.994269 2654 USER sipClientInterface.ttcn:101(function:sipRun)  +----------------------------------------+
+2014/Oct/24 20:26:31.994320 2654 VERDICTOP sipClientInterface.ttcn:101(function:sipRun) setverdict(fail): pass -> fail reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in sip component 0"", new component reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in sip component 0""
+2014/Oct/24 20:26:31.994347 2654 TIMEROP sipClientInterface.ttcn:74(function:sipRun) Start timer timerWaitForCommand: 600 s
+2014/Oct/24 20:26:31.994455 mtc PORTEVENT SipClientLayerComponent.ttcn:253(function:receiveInternalMessage) Message enqueued on sipInternalPort[0] from 2654 @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_FAILURE",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_RECEIVE_MESSAGE"
+            },
+            {
+                parameterName := "ERROR_MESSAGE",
+                parameterValue := "problems executing the command received: COMMAND_RECEIVE_MESSAGE"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 3
+2014/Oct/24 20:26:31.994559 mtc PORTEVENT SipClientLayerComponent.ttcn:270(function:receiveInternalMessage) Receive operation on port sipInternalPort[0] succeeded, message from 2654: @variables.internalPortMessageWithAspsSip : {
+    internalMessage := {
+        description := "COMPONENT_DONE_WITH_FAILURE",
+        parameters := {
+            {
+                parameterName := "COMMAND_EXECUTED",
+                parameterValue := "COMMAND_RECEIVE_MESSAGE"
+            },
+            {
+                parameterName := "ERROR_MESSAGE",
+                parameterValue := "problems executing the command received: COMMAND_RECEIVE_MESSAGE"
+            }
+        }
+    },
+    aspsSip := {
+        {
+            dummy := ""
+        }
+    }
+} id 3
+2014/Oct/24 20:26:31.994594 mtc PORTEVENT SipClientLayerComponent.ttcn:270(function:receiveInternalMessage) Message with id 3 was extracted from the queue of sipInternalPort[0].
+2014/Oct/24 20:26:31.994615 mtc TIMEROP SipClientLayerComponent.ttcn:271(function:receiveInternalMessage) Stop timer TimerTestCaseInternalCommunicationGuard: 185 s
+2014/Oct/24 20:26:31.994639 mtc USER SipClientLayerComponent.ttcn:272(function:receiveInternalMessage) "sip 0 failed to execute the command"
+2014/Oct/24 20:26:31.994663 mtc VERDICTOP sipClientApi.ttcn:546(function:waitForSipToBeDone) getverdict: pass
+2014/Oct/24 20:26:31.994690 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  +----------------------------------------+
+2014/Oct/24 20:26:31.994730 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  |   _______    ___       __   __         |
+2014/Oct/24 20:26:31.994746 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  |  |   ____|  /   \     |  | |  |        |
+2014/Oct/24 20:26:31.994760 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  |  |  |__    /  ^  \    |  | |  |        |
+2014/Oct/24 20:26:31.994774 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  |  |   __|  /  /_\  \   |  | |  |        |
+2014/Oct/24 20:26:31.994788 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  |  |  |    /  _____  \  |  | |  `----.   |
+2014/Oct/24 20:26:31.994802 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  |  |__|   /__/     \__\ |__| |_______|   |
+2014/Oct/24 20:26:31.994818 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  |                                        |
+2014/Oct/24 20:26:31.994832 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  +----------------------------------------+
+2014/Oct/24 20:26:31.994847 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone) "|  REASON:   Problems while waiting for the sipClient thread to be done"
+2014/Oct/24 20:26:31.994869 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone) "|  STEP:     1"
+2014/Oct/24 20:26:31.994887 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone) "|  TESTCASE: WCG100220202"
+2014/Oct/24 20:26:31.994904 mtc USER sipClientApi.ttcn:546(function:waitForSipToBeDone)  +----------------------------------------+
+2014/Oct/24 20:26:31.994929 mtc VERDICTOP sipClientApi.ttcn:546(function:waitForSipToBeDone) setverdict(fail): pass -> fail reason: ""WCG100220202, FAILED STEP: 1, REASON: Problems while waiting for the sipClient thread to be done"", new component reason: ""WCG100220202, FAILED STEP: 1, REASON: Problems while waiting for the sipClient thread to be done""
+2014/Oct/24 20:26:31.994951 mtc ERROR sipClientApi.ttcn:725(function:receiveSipMessage) Dynamic test case error: Accessing an element of type @BaseSipTypes.record_of_ASP_SIP using a negative index: -1.
+2014/Oct/24 20:26:31.994970 mtc VERDICTOP sipClientApi.ttcn:725(function:receiveSipMessage) setverdict(error): fail -> error
+2014/Oct/24 20:26:31.994987 mtc EXECUTOR sipClientApi.ttcn:725(function:receiveSipMessage) Performing error recovery.
+2014/Oct/24 20:26:32.092311 mtc PARALLEL WCG10022_0202.ttcn:27(testcase:WCG100220202) Terminating component type WcgTestCaseComponent.wcgTestCaseComponent.
+2014/Oct/24 20:26:32.092448 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port dnsInternalPort[0] was stopped.
+2014/Oct/24 20:26:32.092473 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port dnsInternalPort[1] was stopped.
+2014/Oct/24 20:26:32.092489 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port dnsInternalPort[2] was stopped.
+2014/Oct/24 20:26:32.092504 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port dnsInternalPort[3] was stopped.
+2014/Oct/24 20:26:32.092519 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Removing unterminated connection between port httpNodeInternalPort[0] and 2655:httpNodeInternalPort.
+2014/Oct/24 20:26:32.092710 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[0] was stopped.
+2014/Oct/24 20:26:32.092735 2655 PORTEVENT httpNodeInterface.ttcn:66(function:httpNodeRun) Connection of port httpNodeInternalPort to mtc:httpNodeInternalPort[0] was closed unexpectedly by the peer.
+2014/Oct/24 20:26:32.092745 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Removing unterminated connection between port httpNodeInternalPort[1] and 2656:httpNodeInternalPort.
+2014/Oct/24 20:26:32.092806 2655 PORTEVENT httpNodeInterface.ttcn:66(function:httpNodeRun) Port httpNodeInternalPort was disconnected from mtc:httpNodeInternalPort[0].
+2014/Oct/24 20:26:32.092874 2656 PORTEVENT httpNodeInterface.ttcn:66(function:httpNodeRun) Connection of port httpNodeInternalPort to mtc:httpNodeInternalPort[1] was closed unexpectedly by the peer.
+2014/Oct/24 20:26:32.092953 2656 PORTEVENT httpNodeInterface.ttcn:66(function:httpNodeRun) Port httpNodeInternalPort was disconnected from mtc:httpNodeInternalPort[1].
+2014/Oct/24 20:26:32.093806 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Message with id 2 was extracted from the queue of httpNodeInternalPort[1].
+2014/Oct/24 20:26:32.093870 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[1] was stopped.
+2014/Oct/24 20:26:32.093904 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[2] was stopped.
+2014/Oct/24 20:26:32.093934 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[3] was stopped.
+2014/Oct/24 20:26:32.093963 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[4] was stopped.
+2014/Oct/24 20:26:32.094014 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[5] was stopped.
+2014/Oct/24 20:26:32.094035 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[6] was stopped.
+2014/Oct/24 20:26:32.094050 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[7] was stopped.
+2014/Oct/24 20:26:32.094065 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[8] was stopped.
+2014/Oct/24 20:26:32.094079 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[9] was stopped.
+2014/Oct/24 20:26:32.094093 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[10] was stopped.
+2014/Oct/24 20:26:32.094108 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[11] was stopped.
+2014/Oct/24 20:26:32.094124 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[12] was stopped.
+2014/Oct/24 20:26:32.094150 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[13] was stopped.
+2014/Oct/24 20:26:32.094179 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[14] was stopped.
+2014/Oct/24 20:26:32.094209 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port httpNodeInternalPort[15] was stopped.
+2014/Oct/24 20:26:32.094227 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[0] was stopped.
+2014/Oct/24 20:26:32.094242 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[1] was stopped.
+2014/Oct/24 20:26:32.094257 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[2] was stopped.
+2014/Oct/24 20:26:32.094272 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[3] was stopped.
+2014/Oct/24 20:26:32.094286 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[4] was stopped.
+2014/Oct/24 20:26:32.094301 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[5] was stopped.
+2014/Oct/24 20:26:32.094326 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[6] was stopped.
+2014/Oct/24 20:26:32.094344 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port msrpInternalPort[7] was stopped.
+2014/Oct/24 20:26:32.094359 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Removing unterminated connection between port sipInternalPort[0] and 2654:sipInternalPort.
+2014/Oct/24 20:26:32.094409 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[0] was stopped.
+2014/Oct/24 20:26:32.094438 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[1] was stopped.
+2014/Oct/24 20:26:32.094467 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[2] was stopped.
+2014/Oct/24 20:26:32.094496 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[3] was stopped.
+2014/Oct/24 20:26:32.094523 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[4] was stopped.
+2014/Oct/24 20:26:32.094551 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[5] was stopped.
+2014/Oct/24 20:26:32.094570 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[6] was stopped.
+2014/Oct/24 20:26:32.094585 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sipInternalPort[7] was stopped.
+2014/Oct/24 20:26:32.094604 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port sshClientPort was stopped.
+2014/Oct/24 20:26:32.094623 mtc PORTEVENT WCG10022_0202.ttcn:27(testcase:WCG100220202) Port tcpClientPort was stopped.
+2014/Oct/24 20:26:32.094638 mtc PARALLEL WCG10022_0202.ttcn:27(testcase:WCG100220202) Component type WcgTestCaseComponent.wcgTestCaseComponent was shut down inside testcase WCG100220202.
+2014/Oct/24 20:26:32.094731 mtc EXECUTOR WCG10022_0202.ttcn:27(testcase:WCG100220202) Waiting for PTCs to finish.
+2014/Oct/24 20:26:32.094807 2654 PORTEVENT sipClientInterface.ttcn:78(function:sipRun) Connection of port sipInternalPort to mtc:sipInternalPort[0] was closed unexpectedly by the peer.
+2014/Oct/24 20:26:32.094842 2654 PORTEVENT sipClientInterface.ttcn:78(function:sipRun) Port sipInternalPort was disconnected from mtc:sipInternalPort[0].
+2014/Oct/24 20:26:32.094967 2655 PARALLEL httpNodeInterface.ttcn:66(function:httpNodeRun) Kill was requested from MC.
+2014/Oct/24 20:26:32.094968 2654 PARALLEL sipClientInterface.ttcn:78(function:sipRun) Kill was requested from MC.
+2014/Oct/24 20:26:32.094999 2654 PARALLEL sipClientInterface.ttcn:78(function:sipRun) Terminating test component execution.
+2014/Oct/24 20:26:32.095004 2655 PARALLEL httpNodeInterface.ttcn:66(function:httpNodeRun) Terminating test component execution.
+2014/Oct/24 20:26:32.095032 2656 PARALLEL httpNodeInterface.ttcn:66(function:httpNodeRun) Kill was requested from MC.
+2014/Oct/24 20:26:32.095070 2656 PARALLEL httpNodeInterface.ttcn:66(function:httpNodeRun) Terminating test component execution.
+2014/Oct/24 20:26:32.095244 2655 PARALLEL - Function httpNodeRun was stopped. PTC terminates.
+2014/Oct/24 20:26:32.095290 2655 PARALLEL - Terminating component type HttpNodeComponent.httpNodeComponent.
+2014/Oct/24 20:26:32.095305 2655 PORTEVENT - Removing unterminated mapping between port clientPort and system:clientPort[0].
+2014/Oct/24 20:26:32.095325 2655 PORTEVENT - Port clientPort was unmapped from system:clientPort[0].
+2014/Oct/24 20:26:32.095335 2656 PARALLEL - Function httpNodeRun was stopped. PTC terminates.
+2014/Oct/24 20:26:32.095336 2654 PARALLEL - Function sipRun was stopped. PTC terminates.
+2014/Oct/24 20:26:32.095345 2655 PORTEVENT - Port clientPort was stopped.
+2014/Oct/24 20:26:32.095360 2655 PORTEVENT - Removing unterminated mapping between port serverPort and system:serverPort[0].
+2014/Oct/24 20:26:32.095373 2656 PARALLEL - Terminating component type HttpNodeComponent.httpNodeComponent.
+2014/Oct/24 20:26:32.095379 2654 PARALLEL - Terminating component type SipClientComponent.sipClientComponent.
+2014/Oct/24 20:26:32.095403 2656 PORTEVENT - Removing unterminated mapping between port clientPort and system:clientPort[1].
+2014/Oct/24 20:26:32.095410 2654 PORTEVENT - Removing unterminated mapping between port sipClientPort and system:sipClientPort[0].
+2014/Oct/24 20:26:32.095433 2655 PORTEVENT - Port serverPort was unmapped from system:serverPort[0].
+2014/Oct/24 20:26:32.095441 2656 PORTEVENT - Port clientPort was unmapped from system:clientPort[1].
+2014/Oct/24 20:26:32.095460 2655 PORTEVENT - Port serverPort was stopped.
+2014/Oct/24 20:26:32.095483 2656 PORTEVENT - Port clientPort was stopped.
+2014/Oct/24 20:26:32.095492 2655 PORTEVENT - Port httpNodeInternalPort was stopped.
+2014/Oct/24 20:26:32.095514 2656 PORTEVENT - Removing unterminated mapping between port serverPort and system:serverPort[1].
+2014/Oct/24 20:26:32.095516 2655 PARALLEL - Component type HttpNodeComponent.httpNodeComponent was shut down inside testcase WCG100220202.
+2014/Oct/24 20:26:32.095530 2654 PORTEVENT - Port sipClientPort was unmapped from system:sipClientPort[0].
+2014/Oct/24 20:26:32.095541 2655 VERDICTOP - Final verdict of PTC: pass reason: "Life is beautiful!"
+2014/Oct/24 20:26:32.095562 2656 PORTEVENT - Port serverPort was unmapped from system:serverPort[1].
+2014/Oct/24 20:26:32.095582 2654 PORTEVENT - Port sipClientPort was stopped.
+2014/Oct/24 20:26:32.095591 2656 PORTEVENT - Port serverPort was stopped.
+2014/Oct/24 20:26:32.095610 2656 PORTEVENT - Port httpNodeInternalPort was stopped.
+2014/Oct/24 20:26:32.095615 2654 PORTEVENT - Port sipInternalPort was stopped.
+2014/Oct/24 20:26:32.095624 2656 PARALLEL - Component type HttpNodeComponent.httpNodeComponent was shut down inside testcase WCG100220202.
+2014/Oct/24 20:26:32.095642 2654 PARALLEL - Component type SipClientComponent.sipClientComponent was shut down inside testcase WCG100220202.
+2014/Oct/24 20:26:32.095647 2656 VERDICTOP - Final verdict of PTC: fail reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in component 1""
+2014/Oct/24 20:26:32.095676 2654 VERDICTOP - Final verdict of PTC: fail reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in sip component 0""
+2014/Oct/24 20:26:32.095850 2655 EXECUTOR - Disconnected from MC.
+2014/Oct/24 20:26:32.095851 2654 EXECUTOR - Disconnected from MC.
+2014/Oct/24 20:26:32.095855 2656 EXECUTOR - Disconnected from MC.
+2014/Oct/24 20:26:32.095880 2654 EXECUTOR - TTCN-3 Parallel Test Component finished.
+2014/Oct/24 20:26:32.095886 2656 EXECUTOR - TTCN-3 Parallel Test Component finished.
+2014/Oct/24 20:26:32.095888 2655 EXECUTOR - TTCN-3 Parallel Test Component finished.
+2014/Oct/24 20:26:32.097799 mtc VERDICTOP WCG10022_0202.ttcn:27(testcase:WCG100220202) Setting final verdict of the test case.
+2014/Oct/24 20:26:32.097883 mtc VERDICTOP WCG10022_0202.ttcn:27(testcase:WCG100220202) Local verdict of MTC: error
+2014/Oct/24 20:26:32.097904 mtc VERDICTOP WCG10022_0202.ttcn:27(testcase:WCG100220202) Local verdict of PTC with component reference 2654: fail (error -> error) reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in sip component 0""
+2014/Oct/24 20:26:32.097925 mtc VERDICTOP WCG10022_0202.ttcn:27(testcase:WCG100220202) Local verdict of PTC with component reference 2655: pass (error -> error) reason: "Life is beautiful!"
+2014/Oct/24 20:26:32.097942 mtc VERDICTOP WCG10022_0202.ttcn:27(testcase:WCG100220202) Local verdict of PTC with component reference 2656: fail (error -> error) reason: ""WCG100220202, FAILED STEP: 1, REASON: problems processing the command received in component 1""
+2014/Oct/24 20:26:32.097967 mtc TESTCASE WCG10022_0202.ttcn:27(testcase:WCG100220202) Test case WCG100220202 finished. Verdict: error
