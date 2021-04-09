@@ -34,27 +34,27 @@ public class Parser {
 		String[] filters = {SENT_ON, ENQUEUD_ON};
 		List<String> messagesList = new ArrayList<String>();
 		List<MessageProperty> messageProperties = new ArrayList<>();
-		List<MessageProperty> tempMessageProperties = new ArrayList<>();
 		
 		// Creating a list of PORTEVENT messages (type SENT_ON or ENQUEUED_ON)
 		messagesList = parseTxtFile(logfile, filters);
 		
-		// Parsing each message to fill in the list of properties
-		messagesList.forEach((temp) -> {
-			tempMessageProperties.clear();
-			tempMessageProperties.addAll(messageProperties);
-			messageProperties.clear();
-			messageProperties.addAll(parseMessage(temp, tempMessageProperties));
+		messagesList.forEach((tempMessage) -> {
+			Reader inputString = new StringReader(tempMessage);
+	    	BufferedReader reader = new BufferedReader(inputString);
+        	Integer openBracketsNb = -1; // These will be used in parseProperties method to link properly the childrenProperties to their parentProperty
+        	Integer closedBracketsNb = 0;
+	    	try {
+	    		// Parse the properties and obtain as a result a list of MessageProperty
+	    		parseProperties(reader, messageProperties, new MessageProperty(), openBracketsNb, closedBracketsNb);
+				messageProperties.forEach((temp) -> {
+					temp.printProperty();
+				});
+				reader.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		});
-		// Printing on console the list of properties
-		messageProperties.forEach((temp) -> {
-			temp.printProperty();
-		});
-    }
-    
-    // Checking if a string 'inputStr' contains the elements of an array of string 'items'
-    public static boolean stringContainsItemFromList(String inputStr, String[] items) {
-        return Arrays.stream(items).anyMatch(inputStr::contains);
     }
     
     // Parsing a text file and returning a list of the PORTEVENT messages
@@ -91,38 +91,39 @@ public class Parser {
     	return messagesList;
     }
     
-    //Parsing a message and returning a list of properties contained in this message
-    public static List<MessageProperty> parseMessage(String message, List<MessageProperty> listMessageProperties){
-    	// Creation of a BufferedReader to go through the message
-    	Reader inputString = new StringReader(message);
-    	BufferedReader reader = new BufferedReader(inputString);
-    	    	
-    	try {
-    		String currentLine = reader.readLine();
-			while (currentLine != null) {
-				if (currentLine.contains(":=")) {
-					MessageProperty property = new MessageProperty (
-							currentLine.trim().substring(0, currentLine.trim().indexOf(":=")),
-							checkType(currentLine.substring(currentLine.indexOf(":=") + 1))
-					);
-					Boolean alreadyExists = false;
-					Integer index = 0;
-					while (alreadyExists == false && index < listMessageProperties.size()) {
-						alreadyExists = property.compareProperties(property, listMessageProperties.get(index));
-						index++;
-					}
-					if (alreadyExists == false) {
-						listMessageProperties.add(property);
-					}
-				}
-				currentLine = reader.readLine();
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    // Parsing the properties and returning a list of MessageProperty
+    public static List<MessageProperty> parseProperties(BufferedReader reader, List<MessageProperty> propertiesList, MessageProperty currentParent, Integer openBracketsNb, Integer closedBracketsNb) throws IOException {
+    	String currentLine = reader.readLine();
+    	Boolean noParent = false; // Used to know if the property is a 'main' one (without any parent property)
     	
-		return listMessageProperties;
+    	while (currentLine != null) {
+    		if (openBracketsNb == closedBracketsNb)
+    			noParent = true;
+    		if(currentLine.contains(OPEN_BRACKET))
+				openBracketsNb++;
+			if(currentLine.contains(CLOSED_BRACKET))
+				closedBracketsNb++;
+    		if (currentLine.contains(":=")) {
+    			MessageProperty property = new MessageProperty (
+						currentLine.trim().substring(0, currentLine.trim().indexOf(":=")),
+						checkType(currentLine.substring(currentLine.indexOf(":=") + 1)),	
+						(noParent ? new MessageProperty() : currentParent));
+    			
+				if (!checkIfExists(property, propertiesList)) {
+					propertiesList.add(property);
+				}
+    			if (property.getPropertyType().equals(COMPLEX_STRUCTURE)) {
+    				currentParent = property;
+    				parseProperties(reader, propertiesList, currentParent, openBracketsNb, closedBracketsNb).forEach((temp) -> {
+        				if (!checkIfExists(property, propertiesList)) {
+        					propertiesList.add(property);
+        				}
+    				});
+    			}
+    		}
+			currentLine = reader.readLine();
+    	}
+    	return propertiesList;
     }
     
     //Checking the type of a property
@@ -142,5 +143,21 @@ public class Parser {
 		        return UNKNOWN;
 		    }
 		}
+    }
+    
+    // Check if a property already is in a list of properties
+    public static boolean checkIfExists(MessageProperty property, List<MessageProperty> propertiesList) {
+    	Boolean alreadyExists = false;
+		Integer index = 0;
+		while (alreadyExists == false && index < propertiesList.size()) {
+			alreadyExists = property.compareProperties(property, propertiesList.get(index));
+			index++;
+		}
+		return alreadyExists;
+    }
+
+    // Checking if a string 'inputStr' contains the elements of an array of string 'items'
+    public static boolean stringContainsItemFromList(String inputStr, String[] items) {
+        return Arrays.stream(items).anyMatch(inputStr::contains);
     }
 }

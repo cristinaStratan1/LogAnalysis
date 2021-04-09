@@ -7,24 +7,28 @@ public class MessageProperty {
 	
 	private String propertyName;
 	private String propertyType;
+	private MessageProperty parentProperty;
 	private List<MessageProperty> listOfChildrenProperties;
 	
 	public MessageProperty(){
         propertyName = null;
         propertyType = null;
+        parentProperty = null;
         listOfChildrenProperties = new ArrayList<>();
     }
 	
-	public MessageProperty(String name, String type){
+	public MessageProperty(String name, String type, MessageProperty parent){
 		super();
         propertyName = name;
         propertyType = type;
-        listOfChildrenProperties = new ArrayList<>();
+        parentProperty = parent;
     }
 	
-	public String getPropertyName() { return propertyName; }
+	public String getPropertyName() { return this.propertyName; }
 	
-	public String getPropertyType() { return propertyType; }
+	public String getPropertyType() { return this.propertyType; }
+	
+	public MessageProperty getParentProperty() { return this.parentProperty; }
 	
 	public List<MessageProperty> listOfChildrenProperties() { return listOfChildrenProperties; }
 	
@@ -32,13 +36,18 @@ public class MessageProperty {
 	
 	public void setPropertyType(String type) { this.propertyType = type; }
 	
+	public void setParentProperty(MessageProperty parent) { this.parentProperty = parent; }
+	
 	public void addChildren(MessageProperty childProperty) { this.listOfChildrenProperties.add(childProperty); }
 	
 	public void printProperty() {
-		System.out.println("Name: " + this.propertyName + "\n" + "Type: " + this.propertyType + "\n");
+		System.out.println("Name: " + this.propertyName + "\n" + "Type: " + this.propertyType);
+		System.out.println("Parent property: " + this.getParentProperty().getPropertyName() + "\n");
+		/*
 		this.listOfChildrenProperties.forEach((temp) -> {
 			this.printProperty();
 		});
+		*/
 	}
 	
 	public boolean compareProperties(MessageProperty prop1, MessageProperty prop2) {

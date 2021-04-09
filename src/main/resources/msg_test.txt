@@ -1,20 +1,24 @@
 2014/Oct/24 18:34:28.826248 mtc PORTEVENT SipClientLayerComponent.ttcn:202(function:sendInternalMessage) Sent on sipInternalPort[0] to 849 @variables.internalPortMessageWithAspsSip : {
-    internalMessage := {
-        description := "COMMAND_RECEIVE_MESSAGE",
-        parameters := {
+	request := {
+        client_id := 9,
+        method := "POST",
+        uri := "/jolokia/",
+        version_major := 1,
+        version_minor := 1,
+        header := {
             {
-                parameterName := "STEP_NUMBER",
-                parameterValue := "1"
+                header_name := "Host",
+                header_value := "142.133.142.3"
             },
             {
-                parameterName := "SUBSCRIBER",
-                parameterValue := "11"
+                header_name := "Content-Type",
+                header_value := "application/json"
+            },
+            {
+                header_name := "Content-Length",
+                header_value := "1971"
             }
-        }
-    },
-    aspsSip := {
-        {
-            dummy := ""
-        }
+        },
+        body := "STRING"
     }
 }
