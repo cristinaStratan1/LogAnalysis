@@ -30,10 +30,11 @@ public class Parser {
 
     public static void main(String[] args) {
     	
-		File logfile = new File(FILE_1);
+		File logfile = new File(FILE_TEST);
 		String[] filters = {SENT_ON, ENQUEUD_ON};
 		List<String> messagesList = new ArrayList<String>();
 		List<MessageProperty> messageProperties = new ArrayList<>();
+		ArrayList<MessageProperty> currentParents = new ArrayList<>(); // Used to track the current parent property of the properties we're parsing
 		
 		// Creating a list of PORTEVENT messages (type SENT_ON or ENQUEUED_ON)
 		messagesList = parseTxtFile(logfile, filters);
@@ -45,15 +46,28 @@ public class Parser {
         	Integer closedBracketsNb = 0;
 	    	try {
 	    		// Parse the properties and obtain as a result a list of MessageProperty
-	    		parseProperties(reader, messageProperties, new MessageProperty(), openBracketsNb, closedBracketsNb);
-				messageProperties.forEach((temp) -> {
-					temp.printProperty();
-				});
+	    		parseProperties(reader, messageProperties, new MessageProperty(), openBracketsNb, closedBracketsNb, currentParents);
 				reader.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		});
+		messageProperties.forEach((temp) -> {
+			if (temp.getParentProperty().getPropertyName() != null) {
+				String nameParent = temp.getParentProperty().getPropertyName();
+				boolean found = false;
+				Integer index = -1;
+				while (!found) {
+					index++;
+					if (messageProperties.get(index).getPropertyName().equals(nameParent))
+						found = true;
+				}
+				messageProperties.get(index).addChildren(temp);
+			}
+		});
+		messageProperties.forEach((temp) -> {
+			temp.printProperty();
 		});
     }
     
@@ -92,13 +106,13 @@ public class Parser {
     }
     
     // Parsing the properties and returning a list of MessageProperty
-    public static List<MessageProperty> parseProperties(BufferedReader reader, List<MessageProperty> propertiesList, MessageProperty currentParent, Integer openBracketsNb, Integer closedBracketsNb) throws IOException {
+    public static List<MessageProperty> parseProperties(BufferedReader reader, List<MessageProperty> propertiesList, MessageProperty currentParent, Integer openBracketsNb, Integer closedBracketsNb, ArrayList<MessageProperty> currentParents) throws IOException {
     	String currentLine = reader.readLine();
-    	Boolean noParent = false; // Used to know if the property is a 'main' one (without any parent property)
     	
     	while (currentLine != null) {
-    		if (openBracketsNb == closedBracketsNb)
-    			noParent = true;
+    		if (openBracketsNb == closedBracketsNb && !currentParents.isEmpty()) {
+    			currentParents.remove(currentParents.size() - 1);
+    		}
     		if(currentLine.contains(OPEN_BRACKET))
 				openBracketsNb++;
 			if(currentLine.contains(CLOSED_BRACKET))
@@ -107,14 +121,17 @@ public class Parser {
     			MessageProperty property = new MessageProperty (
 						currentLine.trim().substring(0, currentLine.trim().indexOf(":=")),
 						checkType(currentLine.substring(currentLine.indexOf(":=") + 1)),	
-						(noParent ? new MessageProperty() : currentParent));
+						(currentParents.isEmpty() ? new MessageProperty() : currentParents.get(currentParents.size() - 1)));
     			
 				if (!checkIfExists(property, propertiesList)) {
 					propertiesList.add(property);
 				}
     			if (property.getPropertyType().equals(COMPLEX_STRUCTURE)) {
+    				openBracketsNb = 1;
+	        		closedBracketsNb = 0;
+    				currentParents.add(property);
     				currentParent = property;
-    				parseProperties(reader, propertiesList, currentParent, openBracketsNb, closedBracketsNb).forEach((temp) -> {
+    				parseProperties(reader, propertiesList, currentParent, openBracketsNb, closedBracketsNb, currentParents).forEach((temp) -> {
         				if (!checkIfExists(property, propertiesList)) {
         					propertiesList.add(property);
         				}

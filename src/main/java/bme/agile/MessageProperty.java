@@ -8,13 +8,13 @@ public class MessageProperty {
 	private String propertyName;
 	private String propertyType;
 	private MessageProperty parentProperty;
-	private List<MessageProperty> listOfChildrenProperties;
+	private ArrayList<MessageProperty> listOfChildrenProperties;
 	
 	public MessageProperty(){
         propertyName = null;
         propertyType = null;
         parentProperty = null;
-        listOfChildrenProperties = new ArrayList<>();
+        listOfChildrenProperties = new ArrayList<MessageProperty>();
     }
 	
 	public MessageProperty(String name, String type, MessageProperty parent){
@@ -22,6 +22,7 @@ public class MessageProperty {
         propertyName = name;
         propertyType = type;
         parentProperty = parent;
+        listOfChildrenProperties = new ArrayList<MessageProperty>();
     }
 	
 	public String getPropertyName() { return this.propertyName; }
@@ -30,7 +31,7 @@ public class MessageProperty {
 	
 	public MessageProperty getParentProperty() { return this.parentProperty; }
 	
-	public List<MessageProperty> listOfChildrenProperties() { return listOfChildrenProperties; }
+	public ArrayList<MessageProperty> getListOfChildrenProperties() { return this.listOfChildrenProperties; }
 	
 	public void setPropertyName(String propertyName) { this.propertyName = propertyName; }
 	
@@ -42,12 +43,16 @@ public class MessageProperty {
 	
 	public void printProperty() {
 		System.out.println("Name: " + this.propertyName + "\n" + "Type: " + this.propertyType);
-		System.out.println("Parent property: " + this.getParentProperty().getPropertyName() + "\n");
-		/*
-		this.listOfChildrenProperties.forEach((temp) -> {
-			this.printProperty();
-		});
-		*/
+		System.out.println("Parent property: " + this.getParentProperty().getPropertyName());
+		if (this.listOfChildrenProperties.isEmpty())
+			System.out.println("No children properties\n");
+		else {
+			System.out.print("Children properties: ");
+			this.listOfChildrenProperties.forEach((temp) -> {
+				System.out.print(temp.propertyName + "  ");
+			});
+			System.out.println("\n");
+		}
 	}
 	
 	public boolean compareProperties(MessageProperty prop1, MessageProperty prop2) {
