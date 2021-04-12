@@ -5,24 +5,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
-import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
-
-import org.burningwave.core.classes.AnnotationSourceGenerator;
-import org.burningwave.core.classes.ClassFactory;
-import org.burningwave.core.classes.ClassSourceGenerator;
-import org.burningwave.core.classes.FunctionSourceGenerator;
-import org.burningwave.core.classes.GenericSourceGenerator;
-import org.burningwave.core.classes.TypeDeclarationSourceGenerator;
-import org.burningwave.core.classes.UnitSourceGenerator;
-import org.burningwave.core.classes.VariableSourceGenerator;
 
 import static bme.agile.Constants.*;
 
