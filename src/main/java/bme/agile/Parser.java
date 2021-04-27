@@ -62,13 +62,12 @@ public class Parser {
 				messageProperties.get(index).addChildren(temp);
 			}
 		});
-		/*
+		
+		// Debug printing - delete when project development is over
 		messageProperties.forEach((temp) -> {
 			temp.printProperty();
 		});
-		*/
 		
-    	UnitSourceGenerator unitSG = UnitSourceGenerator.create("generatedclasses");
     	messageProperties.forEach((temp) -> {
     		generateClassAtRuntime(temp);
     	});
@@ -198,6 +197,7 @@ public class Parser {
     		}
     		unitSG.addClass(tmpClass);
     		unitSG.storeToClassPath(System.getProperty("user.dir") + "/src/main/java");
+    		// Debug printing - delete when project development is over
     		System.out.println("\nGenerated code:\n" + unitSG.make());
     	};
     }
