@@ -128,7 +128,7 @@ public class Parser {
 				if (!checkIfExists(property, propertiesList)) {
 					propertiesList.add(property);
 				}
-    			if (property.getPropertyType().equals(COMPLEX_STRUCTURE)) {
+    			if (property.getPropertyType().equals(ARRAY_STRUCTURE)) {
     				openBracketsNb = 1;
 	        		closedBracketsNb = 0;
     				currentParents.add(property);
@@ -150,10 +150,7 @@ public class Parser {
     	if (propertyValue.contains("\""))
     		return STRING;
     	else if (propertyValue.contains(OPEN_BRACKET))
-    		if (propertyValue.contains(CLOSED_BRACKET))
-    			return EMPTY_STRUCTURE;
-    		else 
-    			return COMPLEX_STRUCTURE;
+    		return ARRAY_STRUCTURE;
     	else {
 			try {
 		        Integer.parseInt(propertyValue.trim().replaceAll(",", ""));
@@ -182,8 +179,7 @@ public class Parser {
     
     //Generate a class at runtime
     public static void generateClassAtRuntime(MessageProperty messageProperty) {
-    	if (messageProperty.getPropertyType().equals(COMPLEX_STRUCTURE) 
-    			|| messageProperty.getPropertyType().equals(EMPTY_STRUCTURE)) {
+    	if (messageProperty.getPropertyType().equals(ARRAY_STRUCTURE)) {
         	UnitSourceGenerator unitSG = UnitSourceGenerator.create("generatedclasses");
     		ClassSourceGenerator tmpClass = ClassSourceGenerator.create(
 					TypeDeclarationSourceGenerator.create(messageProperty.getPropertyName().trim())
