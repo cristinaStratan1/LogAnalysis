@@ -5,11 +5,20 @@ import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
+import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.burningwave.core.classes.AnnotationSourceGenerator;
+import org.burningwave.core.classes.ClassSourceGenerator;
+import org.burningwave.core.classes.FunctionSourceGenerator;
+import org.burningwave.core.classes.GenericSourceGenerator;
+import org.burningwave.core.classes.TypeDeclarationSourceGenerator;
+import org.burningwave.core.classes.UnitSourceGenerator;
+import org.burningwave.core.classes.VariableSourceGenerator;
 
 import static bme.agile.Constants.*;
 
@@ -53,9 +62,16 @@ public class Parser {
 				messageProperties.get(index).addChildren(temp);
 			}
 		});
+		/*
 		messageProperties.forEach((temp) -> {
 			temp.printProperty();
 		});
+		*/
+		
+    	UnitSourceGenerator unitSG = UnitSourceGenerator.create("generatedclasses");
+    	messageProperties.forEach((temp) -> {
+    		generateClassAtRuntime(temp);
+    	});
     }
     
     // Parsing a text file and returning a list of the PORTEVENT messages
@@ -163,5 +179,26 @@ public class Parser {
     // Checking if a string 'inputStr' contains the elements of an array of string 'items'
     public static boolean stringContainsItemFromList(String inputStr, String[] items) {
         return Arrays.stream(items).anyMatch(inputStr::contains);
+    }
+    
+    //Generate a class at runtime
+    public static void generateClassAtRuntime(MessageProperty messageProperty) {
+    	if (messageProperty.getPropertyType().equals(COMPLEX_STRUCTURE) 
+    			|| messageProperty.getPropertyType().equals(EMPTY_STRUCTURE)) {
+        	UnitSourceGenerator unitSG = UnitSourceGenerator.create("generatedclasses");
+    		ClassSourceGenerator tmpClass = ClassSourceGenerator.create(
+					TypeDeclarationSourceGenerator.create(messageProperty.getPropertyName().trim())
+				).addModifier(
+						Modifier.PUBLIC
+				);
+    		if (!messageProperty.getListOfChildrenProperties().isEmpty()) {
+    			messageProperty.getListOfChildrenProperties().forEach((temp) -> {
+    				tmpClass.addField(VariableSourceGenerator.create(TypeDeclarationSourceGenerator.create(temp.getPropertyType()), temp.getPropertyName()).addModifier(Modifier.PRIVATE));
+    			});
+    		}
+    		unitSG.addClass(tmpClass);
+    		unitSG.storeToClassPath(System.getProperty("user.dir") + "/src/main/java");
+    		System.out.println("\nGenerated code:\n" + unitSG.make());
+    	};
     }
 }

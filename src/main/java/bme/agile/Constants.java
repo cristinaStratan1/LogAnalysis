@@ -12,8 +12,8 @@ public class Constants {
 	
 	// CONSTANTS USEFUL FOR DETERMINING TYPE OF PROPERTIES
 	public static final String STRING = "String";
-	public static final String EMPTY_STRUCTURE = "Empty complex structure";
-	public static final String COMPLEX_STRUCTURE = "Complex structure";
+	public static final String EMPTY_STRUCTURE = "Empty_complex_structure";
+	public static final String COMPLEX_STRUCTURE = "Complex_structure";
 	public static final String INTEGER = "Integer";
 	public static final String UNKNOWN = "Unknown";
 	
