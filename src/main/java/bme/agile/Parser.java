@@ -122,7 +122,7 @@ public class Parser {
     		if (currentLine.contains(":=")) {
     			MessageProperty property = new MessageProperty (
 						currentLine.trim().substring(0, currentLine.trim().indexOf(":=")),
-						checkType(currentLine.substring(currentLine.indexOf(":=") + 1)),	
+						checkType(currentLine.substring(currentLine.indexOf(":=") + 2)),	
 						(currentParents.isEmpty() ? new MessageProperty() : currentParents.get(currentParents.size() - 1)));
     			
 				if (!checkIfExists(property, propertiesList)) {
@@ -156,7 +156,7 @@ public class Parser {
     			return COMPLEX_STRUCTURE;
     	else {
 			try {
-		        Integer.parseInt(propertyValue);
+		        Integer.parseInt(propertyValue.trim().replaceAll(",", ""));
 		        return INTEGER;
 		    } catch (NumberFormatException ex) {
 		        return UNKNOWN;
