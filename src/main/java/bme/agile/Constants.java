@@ -13,10 +13,8 @@ public class Constants {
 	// CONSTANTS USEFUL FOR DETERMINING TYPE OF PROPERTIES
 	public static final String STRING = "String";
 	public static final String ARRAY_STRUCTURE = "Array";
-	//public static final String EMPTY_STRUCTURE = "Empty_complex_structure";
-	//public static final String COMPLEX_STRUCTURE = "Complex_structure";
 	public static final String INTEGER = "Integer";
-	public static final String UNKNOWN = "Unknown";
+	public static final String OBJECT = "Object";
 	
 	// CONSTANTS FOR LOG FILES
 	public static final String FILE_1 = "src/main/resources/WCG100140020.txt";

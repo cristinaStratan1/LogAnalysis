@@ -151,12 +151,14 @@ public class Parser {
     		return STRING;
     	else if (propertyValue.contains(OPEN_BRACKET))
     		return ARRAY_STRUCTURE;
+    	else if (propertyValue.contains("(") && propertyValue.contains(")"))
+    		return INTEGER;
     	else {
 			try {
 		        Integer.parseInt(propertyValue.trim().replaceAll(",", ""));
 		        return INTEGER;
 		    } catch (NumberFormatException ex) {
-		        return UNKNOWN;
+		        return OBJECT;
 		    }
 		}
     }
