@@ -5,11 +5,20 @@ import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
+import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.burningwave.core.classes.AnnotationSourceGenerator;
+import org.burningwave.core.classes.ClassSourceGenerator;
+import org.burningwave.core.classes.FunctionSourceGenerator;
+import org.burningwave.core.classes.GenericSourceGenerator;
+import org.burningwave.core.classes.TypeDeclarationSourceGenerator;
+import org.burningwave.core.classes.UnitSourceGenerator;
+import org.burningwave.core.classes.VariableSourceGenerator;
 
 import static bme.agile.Constants.*;
 
@@ -53,9 +62,15 @@ public class Parser {
 				messageProperties.get(index).addChildren(temp);
 			}
 		});
+		
+		// Debug printing - delete when project development is over
 		messageProperties.forEach((temp) -> {
 			temp.printProperty();
 		});
+		
+    	messageProperties.forEach((temp) -> {
+    		generateClassAtRuntime(temp);
+    	});
     }
     
     // Parsing a text file and returning a list of the PORTEVENT messages
@@ -107,13 +122,13 @@ public class Parser {
     		if (currentLine.contains(":=")) {
     			MessageProperty property = new MessageProperty (
 						currentLine.trim().substring(0, currentLine.trim().indexOf(":=")),
-						checkType(currentLine.substring(currentLine.indexOf(":=") + 1)),	
+						checkType(currentLine.substring(currentLine.indexOf(":=") + 2)),	
 						(currentParents.isEmpty() ? new MessageProperty() : currentParents.get(currentParents.size() - 1)));
     			
 				if (!checkIfExists(property, propertiesList)) {
 					propertiesList.add(property);
 				}
-    			if (property.getPropertyType().equals(COMPLEX_STRUCTURE)) {
+    			if (property.getPropertyType().equals(ARRAY_STRUCTURE)) {
     				openBracketsNb = 1;
 	        		closedBracketsNb = 0;
     				currentParents.add(property);
@@ -135,16 +150,15 @@ public class Parser {
     	if (propertyValue.contains("\""))
     		return STRING;
     	else if (propertyValue.contains(OPEN_BRACKET))
-    		if (propertyValue.contains(CLOSED_BRACKET))
-    			return EMPTY_STRUCTURE;
-    		else 
-    			return COMPLEX_STRUCTURE;
+    		return ARRAY_STRUCTURE;
+    	else if (propertyValue.contains("(") && propertyValue.contains(")"))
+    		return INTEGER;
     	else {
 			try {
-		        Integer.parseInt(propertyValue);
+		        Integer.parseInt(propertyValue.trim().replaceAll(",", ""));
 		        return INTEGER;
 		    } catch (NumberFormatException ex) {
-		        return UNKNOWN;
+		        return OBJECT;
 		    }
 		}
     }
@@ -163,5 +177,26 @@ public class Parser {
     // Checking if a string 'inputStr' contains the elements of an array of string 'items'
     public static boolean stringContainsItemFromList(String inputStr, String[] items) {
         return Arrays.stream(items).anyMatch(inputStr::contains);
+    }
+    
+    //Generate a class at runtime
+    public static void generateClassAtRuntime(MessageProperty messageProperty) {
+    	if (messageProperty.getPropertyType().equals(ARRAY_STRUCTURE)) {
+        	UnitSourceGenerator unitSG = UnitSourceGenerator.create("generatedclasses");
+    		ClassSourceGenerator tmpClass = ClassSourceGenerator.create(
+					TypeDeclarationSourceGenerator.create(messageProperty.getPropertyName().trim())
+				).addModifier(
+						Modifier.PUBLIC
+				);
+    		if (!messageProperty.getListOfChildrenProperties().isEmpty()) {
+    			messageProperty.getListOfChildrenProperties().forEach((temp) -> {
+    				tmpClass.addField(VariableSourceGenerator.create(TypeDeclarationSourceGenerator.create(temp.getPropertyType()), temp.getPropertyName()).addModifier(Modifier.PRIVATE));
+    			});
+    		}
+    		unitSG.addClass(tmpClass);
+    		unitSG.storeToClassPath(System.getProperty("user.dir") + "/src/main/java");
+    		// Debug printing - delete when project development is over
+    		System.out.println("\nGenerated code:\n" + unitSG.make());
+    	};
     }
 }
