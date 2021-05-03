@@ -12,7 +12,7 @@ public class Constants {
 	
 	// CONSTANTS USEFUL FOR DETERMINING TYPE OF PROPERTIES
 	public static final String STRING = "String";
-	public static final String ARRAY_STRUCTURE = "Array";
+	public static final String ARRAY_STRUCTURE = "Arrays";
 	public static final String INTEGER = "Integer";
 	public static final String OBJECT = "Object";
 	

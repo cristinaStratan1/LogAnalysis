@@ -12,10 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.burningwave.core.classes.AnnotationSourceGenerator;
 import org.burningwave.core.classes.ClassSourceGenerator;
-import org.burningwave.core.classes.FunctionSourceGenerator;
-import org.burningwave.core.classes.GenericSourceGenerator;
 import org.burningwave.core.classes.TypeDeclarationSourceGenerator;
 import org.burningwave.core.classes.UnitSourceGenerator;
 import org.burningwave.core.classes.VariableSourceGenerator;
@@ -38,11 +35,14 @@ public class Parser {
 		messagesList.forEach((tempMessage) -> {
 			Reader inputString = new StringReader(tempMessage);
 	    	BufferedReader reader = new BufferedReader(inputString);
-        	Integer openBracketsNb = -1; // These will be used in parseProperties method to link properly the childrenProperties to their parentProperty
+        	Integer openBracketsNb = 0; // These will be used in parseProperties method to link properly the childrenProperties to their parentProperty
         	Integer closedBracketsNb = 0;
 	    	try {
+	    		currentParents.add(new MessageProperty(PORTEVENT.toLowerCase(), ARRAY_STRUCTURE, new MessageProperty()));
+	    		messageProperties.add(currentParents.get(0));
 	    		// Parse the properties and obtain as a result a list of MessageProperty
-	    		parseProperties(reader, messageProperties, new MessageProperty(), openBracketsNb, closedBracketsNb, currentParents);
+		    	reader.readLine();
+	    		parseProperties(reader, messageProperties, openBracketsNb, closedBracketsNb, currentParents);
 				reader.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -108,11 +108,12 @@ public class Parser {
     }
     
     // Parsing the properties and returning a list of MessageProperty
-    public static List<MessageProperty> parseProperties(BufferedReader reader, List<MessageProperty> propertiesList, MessageProperty currentParent, Integer openBracketsNb, Integer closedBracketsNb, ArrayList<MessageProperty> currentParents) throws IOException {
+    public static List<MessageProperty> parseProperties(BufferedReader reader, List<MessageProperty> propertiesList, Integer openBracketsNb, Integer closedBracketsNb, ArrayList<MessageProperty> currentParents) throws IOException {
     	String currentLine = reader.readLine();
     	
     	while (currentLine != null) {
-    		if (openBracketsNb == closedBracketsNb && !currentParents.isEmpty()) {
+    		if (openBracketsNb == closedBracketsNb 
+    				&& !((MessageProperty)(currentParents.get(currentParents.size() - 1))).getPropertyName().equals(PORTEVENT.toLowerCase())) {
     			currentParents.remove(currentParents.size() - 1);
     		}
     		if(currentLine.contains(OPEN_BRACKET))
@@ -132,8 +133,7 @@ public class Parser {
     				openBracketsNb = 1;
 	        		closedBracketsNb = 0;
     				currentParents.add(property);
-    				currentParent = property;
-    				parseProperties(reader, propertiesList, currentParent, openBracketsNb, closedBracketsNb, currentParents).forEach((temp) -> {
+    				parseProperties(reader, propertiesList, openBracketsNb, closedBracketsNb, currentParents).forEach((temp) -> {
         				if (!checkIfExists(property, propertiesList)) {
         					propertiesList.add(property);
         				}
@@ -182,17 +182,28 @@ public class Parser {
     //Generate a class at runtime
     public static void generateClassAtRuntime(MessageProperty messageProperty) {
     	if (messageProperty.getPropertyType().equals(ARRAY_STRUCTURE)) {
-        	UnitSourceGenerator unitSG = UnitSourceGenerator.create("generatedclasses");
+        	UnitSourceGenerator unitSG = UnitSourceGenerator.create("generatedclasses"
+        		).addImport(
+        			"java.util.Arrays"
+        		);
     		ClassSourceGenerator tmpClass = ClassSourceGenerator.create(
-					TypeDeclarationSourceGenerator.create(messageProperty.getPropertyName().trim())
-				).addModifier(
-						Modifier.PUBLIC
-				);
+				TypeDeclarationSourceGenerator.create(messageProperty.getPropertyName().trim())
+			).addModifier(
+				Modifier.PUBLIC
+			);
+    		
+    		if (!messageProperty.getPropertyName().equals(PORTEVENT.toLowerCase()))
+    			tmpClass.expands(
+					TypeDeclarationSourceGenerator.create(messageProperty.getParentProperty().getPropertyName()
+				)
+			);
+    		
     		if (!messageProperty.getListOfChildrenProperties().isEmpty()) {
     			messageProperty.getListOfChildrenProperties().forEach((temp) -> {
     				tmpClass.addField(VariableSourceGenerator.create(TypeDeclarationSourceGenerator.create(temp.getPropertyType()), temp.getPropertyName()).addModifier(Modifier.PRIVATE));
     			});
     		}
+    		
     		unitSG.addClass(tmpClass);
     		unitSG.storeToClassPath(System.getProperty("user.dir") + "/src/main/java");
     		// Debug printing - delete when project development is over
