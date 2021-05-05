@@ -1,7 +1,6 @@
 package bme.agile;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MessageProperty {
 	
@@ -41,26 +40,8 @@ public class MessageProperty {
 	
 	public void addChildren(MessageProperty childProperty) { this.listOfChildrenProperties.add(childProperty); }
 	
-	public void printProperty() {
-		System.out.println("Name: " + this.propertyName + "\n" + "Type: " + this.propertyType);
-		System.out.println("Parent property: " + this.getParentProperty().getPropertyName());
-		if (this.listOfChildrenProperties.isEmpty())
-			System.out.println("No children properties\n");
-		else {
-			System.out.print("Children properties: ");
-			this.listOfChildrenProperties.forEach((temp) -> {
-				System.out.print(temp.propertyName + "  ");
-			});
-			System.out.println("\n");
-		}
-	}
-	
 	public boolean compareProperties(MessageProperty prop1, MessageProperty prop2) {
-		if (prop1.propertyName.equals(prop2.propertyName) 
-				&& prop1.propertyType.equals(prop2.propertyType))
-			return true;
-		else
-			return false;
+		return prop1.propertyName.equals(prop2.propertyName);
 	}
 	
 }

@@ -2,17 +2,18 @@ package bme.agile;
 
 public class Constants {
 
-	// CONSTANTS USEFUL FOR PARSING LOG FILES
+	// CONSTANTS USEFUL FOR PARSING LOG FILES AND MESSAGES
 	public static final String SENT_ON = "Sent on";
 	public static final String ENQUEUD_ON = "Message enqueud on";
 	public static final String PORTEVENT = "PORTEVENT";
 	public static final String OPEN_BRACKET = "{";
 	public static final String CLOSED_BRACKET = "}";
 	public static final String NEW_LINE = "\n";
+	public static final String EQUAL = ":=";
 	
 	// CONSTANTS USEFUL FOR DETERMINING TYPE OF PROPERTIES
 	public static final String STRING = "String";
-	public static final String ARRAY_STRUCTURE = "Array";
+	public static final String ARRAY_STRUCTURE = "Arrays";
 	public static final String INTEGER = "Integer";
 	public static final String OBJECT = "Object";
 	
